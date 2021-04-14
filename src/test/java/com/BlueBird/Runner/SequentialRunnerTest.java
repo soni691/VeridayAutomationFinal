@@ -30,10 +30,10 @@ import cucumber.api.junit.Cucumber;
 
 		features = {
 				//"classpath:featureFiles/Login/Login.feature",
-				//"classpath:featureFiles/UserManager/UserManager.feature",
+				"classpath:featureFiles/UserManager/UserManager.feature",
 				//"classpath:featureFiles/OrganizationalGroups/OrganizationalGroups.feature"
 				//"classpath:featureFiles/HomePage/HomePage.feature",
-				"classpath:featureFiles/DigitalWorkSpace/DigitalWorkSpace.feature"
+				//"classpath:featureFiles/DigitalWorkSpace/DigitalWorkSpace.feature"
 		},
 		tags = { "~@ignore"},
 		glue = { "com.BlueBird.StepDefinition" },

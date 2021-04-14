@@ -90,8 +90,101 @@ public class UserManagerStepDefinition {
 
 	@Then("^A new Primary User is created$")
 	public void A_new_Primary_User_is_created() throws Throwable {
-		System.out.println("User is CReated");
+		System.out.println("User is Created");
+		usermanagerPage.pUserpopup();
 	    
+	}
+	
+	@And("^I search existing \"(.*)\"$")
+	public void i_search_existing_user(String primaryuseremail) throws Throwable {
+		usermanagerPage.SearchUser(primaryuseremail);
+	    
+	}
+
+	@And("^I click on Go button$")
+	public void i_click_on_Go_button() throws Throwable {
+		usermanagerPage.ClickGo();
+	}
+
+	@And("^I click on Settings options$")
+	public void i_click_on_Settings_options() throws Throwable {
+		usermanagerPage.ClickSetting();
+	}
+
+	@And("^I click on DigitalWorkspace option$")
+	public void i_click_on_DigitalWorkspace_option() throws Throwable {
+		usermanagerPage.ClickonbackDW();
+	}
+
+	@And("^I click on MyWebsite options$")
+	public void i_click_on_MyWebsite_options() throws Throwable {
+		usermanagerPage.ClickonMyWebsite();
+		
+	}
+
+	@And("^I click on Blog options$")
+	public void i_click_on_Blog_options() throws Throwable {
+		usermanagerPage.ClickonBlog();
+	}
+
+	@And("^I click on Forms options$")
+	public void i_click_on_Forms_options() throws Throwable {
+		usermanagerPage.ClickonForms();
+	}
+
+	@And("^I click on Events options$")
+	public void i_click_on_Events_options() throws Throwable {
+		usermanagerPage.ClickonEvents();
+	}
+
+	@And("^I click on Polls options$")
+	public void i_click_on_Polls_options() throws Throwable {
+		usermanagerPage.ClickonPolls();
+	}
+
+	@And("^I click on RecycleBin options$")
+	public void i_click_on_RecycleBin_options() throws Throwable {
+		usermanagerPage.ClickonRecycleBin();
+	}
+
+	@And("^I click on MyProfile options$")
+	public void i_click_on_MyProfile_options() throws Throwable {
+		usermanagerPage.ClickonMyProfile();
+	}
+
+	@And("^I click on Updates options$")
+	public void i_click_on_Updates_options() throws Throwable {
+		usermanagerPage.ClickonUpdates();
+	}
+
+	@And("^I click on CampaignManager options$")
+	public void i_click_on_CampaignManager_options() throws Throwable {
+		usermanagerPage.ClickonCampaignManager();
+	}
+
+	@And("^I click on ContentCollections options$")
+	public void i_click_on_ContentCollections_options() throws Throwable {
+		usermanagerPage.ClickonContentCollection();
+	}
+
+	@And("^I click on Dashboard options$")
+	public void i_click_on_Dashboard_options() throws Throwable {
+		usermanagerPage.ClickonDashboard();
+	}
+
+	@And("^I click on Dashboard(\\d+) options$")
+	public void i_click_on_Dashboard_options(int arg1) throws Throwable {
+		usermanagerPage.ClickonDashboard2();
+	}
+
+	@And("^I click on FileManager options$")
+	public void i_click_on_FileManager_options() throws Throwable {
+	    
+	}
+	
+	@And("^I find storedPrimaryUser name$")
+	public void I_find_storedPrimaryUser_name() throws Throwable {
+		usermanagerPage.StoredpUserName();
 	}
 
 }

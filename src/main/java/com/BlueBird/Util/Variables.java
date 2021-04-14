@@ -38,6 +38,8 @@ public class Variables {
 
 	public static String groupName;
 	
+	public static String pUserName;
+	
 	public static String regionName;
 	
 	public static String branchName;
