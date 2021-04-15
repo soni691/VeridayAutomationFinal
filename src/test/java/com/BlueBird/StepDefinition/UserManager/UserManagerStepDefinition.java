@@ -179,7 +179,7 @@ public class UserManagerStepDefinition {
 
 	@And("^I click on FileManager options$")
 	public void i_click_on_FileManager_options() throws Throwable {
-	    
+		usermanagerPage.ClickonFileManager();
 	}
 	
 	@And("^I find storedPrimaryUser name$")
