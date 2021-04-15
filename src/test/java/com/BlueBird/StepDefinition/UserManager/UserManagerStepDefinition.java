@@ -95,9 +95,9 @@ public class UserManagerStepDefinition {
 	    
 	}
 	
-	@And("^I search existing \"(.*)\"$")
-	public void i_search_existing_user(String primaryuseremail) throws Throwable {
-		usermanagerPage.SearchUser(primaryuseremail);
+	@And("^I search existing \"([^\"]*)\" or \"([^\"]*)\"$")
+	public void i_search_existing_user(String primaryuseremail, String secondemail) throws Throwable {
+		usermanagerPage.SearchUser(primaryuseremail,secondemail);
 	    
 	}
 

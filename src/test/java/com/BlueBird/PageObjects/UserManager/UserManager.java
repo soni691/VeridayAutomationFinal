@@ -156,9 +156,18 @@ public class UserManager extends BasePage {
 	/**
 	 * Search User
 	 */
-	public void SearchUser(String primaryuseremail) {
-		webElementHelper.TypeInto(SearchUser, primaryuseremail);
-		webElementHelper.click(SearchUserButton);
+	public void SearchUser(String primaryuseremail,String secondemail) {
+		String currentURL=driver.getCurrentUrl();
+		if(currentURL.contains("demo.qa")) {
+			webElementHelper.TypeInto(SearchUser, primaryuseremail);
+			webElementHelper.click(SearchUserButton);
+		}
+		else if(currentURL.contains("clic.qa"))
+		{
+			webElementHelper.TypeInto(SearchUser, secondemail);
+			webElementHelper.click(SearchUserButton);
+		}
+		
 	}
 	
 	/** identify Go button */

@@ -18,9 +18,9 @@ Background:
 #	
 #	Then A new Primary User is created
 	
-Scenario Outline: Validate user Manager option validations
+Scenario: Validate user Manager option validations
     When I click on User Manager option
-    And I search existing "<primaryuseremail>"
+    And I search existing "alisha.new@veriday.com" or "alisha.new@veriday.com" 
     And I click on Go button
     And I click on Settings options
     And I click on DigitalWorkspace option
@@ -49,7 +49,3 @@ Scenario Outline: Validate user Manager option validations
     And I click on Dashboard2 options
     And I click on DigitalWorkspace option
     And I click on FileManager options
-
- Examples: 
-    | primaryuseremail |
-    | alisha.new@veriday.com |
