@@ -1,5 +1,7 @@
 package com.BlueBird.PageObject.adminHQ;
 
+import static org.junit.Assert.*;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.BlueBird.Helper.WaitHelper;
 import com.BlueBird.Helper.WebElementHelper;
 import com.BlueBird.PageObjects.BasePage;
+
+import junit.framework.Assert;
 
 public class AdminHQ extends BasePage {
 	private WaitHelper waithelper;
@@ -30,7 +34,7 @@ public class AdminHQ extends BasePage {
 	public void verifyAHQTitle() throws InterruptedException {
 		String hqtile = driver.getTitle();
 		String expectedTitle = "Admin HQ - Digital Agent";
-		assertEquals(expectedTitle, hqtile);
+		Assert.assertEquals(expectedTitle, hqtile);
 	}
 
 	/** click on HUbManager option */
