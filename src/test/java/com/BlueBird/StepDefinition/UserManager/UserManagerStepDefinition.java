@@ -41,18 +41,28 @@ public class UserManagerStepDefinition {
 	   usermanagerPage.enterAccountEmail();
 	    
 	}
-
-	@And("^I enter First Name$")
-	public void i_enter_First_Name() throws Throwable {
-		usermanagerPage.enterFirstName();
+	@And("^I enter First Name \"([^\"]*)\"$")
+	public void I_enter_First_Name(String fname) throws Throwable {
+		usermanagerPage.setFName(fname);
 	    
 	}
 
-	@And("^I enter Last Name$")
-	public void i_enter_Last_Name() throws Throwable {
-		usermanagerPage.enterLastName();
+//	@And("^I enter First Name$")
+//	public void i_enter_First_Name() throws Throwable {
+//		usermanagerPage.enterFirstName();
+//	    
+//	}
+	@And("^I enter Last Name \"([^\"]*)\"$")
+	public void I_enter_Last_Name(String lname) throws Throwable {
+		usermanagerPage.setLName(lname);
 	    
 	}
+
+//	@And("^I enter Last Name$")
+//	public void i_enter_Last_Name() throws Throwable {
+//		usermanagerPage.enterLastName();
+//	    
+//	}
 
 	@And("^I enter JobTitle1$")
 	public void i_enter_JobTitle1() throws Throwable {
