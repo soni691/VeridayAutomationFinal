@@ -1,5 +1,8 @@
 package com.BlueBird.PageObjects.UserManager;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -58,15 +61,38 @@ public class UserManager extends BasePage {
 	/**
 	 * Enter First Name
 	 */
-	public void enterFirstName() {
-		webElementHelper.TypeInto(Firstname, generateData.generateRandomString(5));
+	public String append;
+	public String setFName(String fname) {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+		//Getting current date
+		Calendar cal = Calendar.getInstance();
+		//Number of Days to add
+	    cal.add(Calendar.DAY_OF_MONTH, 0);
+		//Date after adding the days to the current date
+		String newDate = sdf.format(cal.getTime());
+		//String append;
+		append = fname+newDate;
+		fname=append;
+		webElementHelper.TypeInto(Firstname, fname);
+		return fname;
 	}
 	
 	@FindBy(xpath = "//input[@id='lastNameField']")
 	private WebElement Lastname;
-	public void enterLastName() {
-		webElementHelper.TypeInto(Lastname, generateData.generateRandomString(5));
-	}
+	public String setLName(String lname) {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+		//Getting current date
+		Calendar cal = Calendar.getInstance();
+		//Number of Days to add
+	    cal.add(Calendar.DAY_OF_MONTH, 0);
+		//Date after adding the days to the current date
+		String newDate = sdf.format(cal.getTime());
+		//String append;
+		append = lname+newDate;
+		lname=append;
+		webElementHelper.TypeInto(Lastname, lname);
+		return lname;
+	}	
 	
 	@FindBy(xpath = "//input[@id='user-title-filter']")
 	private WebElement Jobtitle;
