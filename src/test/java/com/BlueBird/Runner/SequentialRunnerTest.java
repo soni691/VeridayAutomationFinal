@@ -1,6 +1,6 @@
 /* Purpose: Contains Run method and generate report in this file
- Created By: Dhaval Jethava 
- Created Date: 13th July 2018
+ Created By: Sumit Soni
+ Created Date: 26th April 2020
  */
 
 package com.BlueBird.Runner;
@@ -35,7 +35,7 @@ import cucumber.api.junit.Cucumber;
 				//"classpath:featureFiles/HomePage/HomePage.feature",
 				//"classpath:featureFiles/DigitalWorkSpace/DigitalWorkSpace.feature"
 		},
-		tags = { "~@ignore"},
+		tags = { "@smoke","@RegressionTest"},
 		glue = { "com.BlueBird.StepDefinition" },
 		plugin = { "junit:target/cucumberJunit.xml" , "com.BlueBird.Util.CustomFormatter"},
 		dryRun = false
