@@ -130,6 +130,14 @@ public class UserManager extends BasePage {
 		
 	}
 	
+	//read location from config file
+		public void enterLocationfromProperty(String location) throws InterruptedException {
+				webElementHelper.click(Location);
+				Variables.locationName=location;
+				webElementHelper.selectFromDropDown(location);
+				webElementHelper.click(Location);			
+		}
+	
 	@FindBy(xpath = "//input[@id='provincial-list']")
 	private WebElement StatesofRegistration;
 	
