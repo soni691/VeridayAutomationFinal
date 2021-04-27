@@ -567,6 +567,13 @@ public class WebElementHelper extends WaitHelper {
 
 		ThreadSleep(500);
 	}
+	
+	public void selectFromDropDown(String data) {	
+		String xPath = String.format("//option[text()='%s']",  Variables.locationName);
+		System.out.println(xPath);
+		click(getVisibleElement(By.xpath(xPath)));
+		ThreadSleep(500);
+	}
 
 	public void selectFromDropDown(WebElement dropdownIcon, String text) {
 		List<WebElement> dropdownList = getQuickListOfElement(By.xpath("//div[@class='x-combo-list-inner']"));
