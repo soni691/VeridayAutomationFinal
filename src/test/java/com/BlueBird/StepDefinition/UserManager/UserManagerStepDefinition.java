@@ -77,8 +77,8 @@ public class UserManagerStepDefinition {
 
 	@And("^I enter Location$")
 	public void i_enter_Location() throws Throwable {
-		usermanagerPage.enterLocation();
-	    
+		String location = CONFIG.getProperty("demo.location");
+		usermanagerPage.enterLocationfromProperty(location);	    
 	}
 
 	@And("^I enter PhoneNumber$")
