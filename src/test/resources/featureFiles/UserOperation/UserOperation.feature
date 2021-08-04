@@ -23,4 +23,16 @@ Scenario: Create new Site scenario
 	And I click on SiteGenerate button
 	And I click on Start your digital journey button
 	
+@smoke @RegressionTest
+Scenario: Turn Workflow on scenario
+	When I enter admin user name
+	And I enter admin password
+	And I click on login button
+	And I click on AdminHQ button
+	And I enter Hub Email
+	And I click on SearchHub button
+	And I click on Action button
+	And I click on Turn Workflow on option
+	And I enter text "WORKFLOWON"
+	And I click on YesturnOnWorkflow button
 	

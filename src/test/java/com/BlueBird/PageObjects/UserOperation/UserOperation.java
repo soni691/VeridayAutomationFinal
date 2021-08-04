@@ -8,10 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 import com.BlueBird.Helper.WaitHelper;
 import com.BlueBird.Helper.WebElementHelper;
 import com.BlueBird.PageObjects.BasePage;
+import com.BlueBird.PageObjects.UserManager.UserManager;
 import com.BlueBird.Util.Variables;
 
 public class UserOperation extends BasePage{
 	private WaitHelper waithelper;
+	private UserManager usermanager;
 
 	public UserOperation(WebDriver driver, WebElementHelper webElementHelper) {
 		super(driver, webElementHelper);
@@ -109,4 +111,53 @@ public class UserOperation extends BasePage{
 			webElementHelper.click(StartJourney);		
 	}
 	
+	/** click on search hub textbox*/
+	@FindBy(xpath = "//input[@id='searchSites']")
+	private WebElement SearchHub;
+	public void clickonSearchhub() throws InterruptedException {	
+			webElementHelper.click(SearchHub);		
+	}
+	/**click on Search hub button*/
+	@FindBy(xpath="//button[normalize-space()='Search for a Hub']")
+	private WebElement SearchHubbutton;
+	public void clickonSearchHubButton() {
+		webElementHelper.click(SearchHubbutton);
+	}
+	
+	public void setHubEmail() {
+		webElementHelper.TypeInto(SearchHub, Variables.accountemail);
+	}
+	
+	/** click on Action button */
+	@FindBy(xpath = "//button[normalize-space()='Action']")
+	private WebElement Action;
+	public void clickonAction() throws InterruptedException {	
+			webElementHelper.click(Action);		
+	}
+	
+	/** click on Turn on workflow button */
+	@FindBy(xpath = "//a[normalize-space()='Turn Workflow On']")
+	private WebElement WorkflowOn;
+	public void clickonWorkflow() throws InterruptedException {	
+			webElementHelper.click(WorkflowOn);		
+	}
+	
+	/** click on enter workflow textbox */
+	@FindBy(xpath = "//input[@id='da-action-confirm-input']")
+	private WebElement Workflowbox;
+	public void clickonWorkflowbox() throws InterruptedException {	
+			webElementHelper.click(Workflowbox);		
+	}
+	
+	/** enter text WORKFLOWON*/
+	public void setWorkflowText(String wflow) throws InterruptedException {	
+		webElementHelper.TypeInto(Workflowbox, wflow);		
+    }
+	
+	/** Click on Yesturn on workflow button */
+	@FindBy(xpath = "//button[normalize-space()='Yes, turn ON Workflow']")
+	private WebElement TurnonWorkflow;
+	public void clickononWorkFlow() throws InterruptedException {	
+			webElementHelper.click(TurnonWorkflow);		
+	}
 }

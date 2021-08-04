@@ -77,4 +77,34 @@ public class UserOperationStepDefinition {
 		useropepage.clickonStartJourney();
 	}
 	
+	@And("^I enter Hub Email$")
+	public void i_enter_hub_email() throws Throwable {
+		useropepage.setHubEmail();
+	}
+	
+	@And("^I click on SearchHub button$")
+	public void I_click_on_Search_hub_button() throws Throwable {
+		useropepage.clickonSearchHubButton();
+	}
+	
+	@And("^I click on Action button$")
+	public void I_click_on_Action_button() throws Throwable {
+		useropepage.clickonAction();
+	}
+	
+	@And("^I click on Turn Workflow on option$")
+	public void I_click_on_on_workflow_button() throws Throwable {
+		useropepage.clickonWorkflow();
+	}
+	
+	@And("^I enter text \"([^\"]*)\"$")
+	public void i_enter_text_workflow(String wflow) throws Throwable {
+		useropepage.setWorkflowText(wflow);
+	}
+	
+	@And("^I click on YesturnOnWorkflow button$")
+	public void i_click_on_yesturnon_button() throws Throwable {
+		useropepage.clickononWorkFlow();
+	    
+	}
 }

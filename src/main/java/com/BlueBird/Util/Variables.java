@@ -44,4 +44,6 @@ public class Variables {
 	
 	public static String branchName;
 	
+	public static String accountemail;
+	
 }

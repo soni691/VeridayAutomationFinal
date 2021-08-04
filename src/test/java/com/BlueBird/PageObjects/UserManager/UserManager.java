@@ -72,7 +72,7 @@ public class UserManager extends BasePage {
 		String newDate = sdf.format(cal.getTime());
 		//String append;
 		append = fname+newDate;
-		fname=append;
+		Variables.accountemail=fname=append;
 		webElementHelper.TypeInto(Firstname, fname);
 		return fname;
 	}
