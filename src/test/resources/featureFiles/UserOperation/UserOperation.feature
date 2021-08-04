@@ -12,7 +12,7 @@ Scenario: Create new Site scenario
 	And I click on Search user textbox
 	And I enter User Name
 	And I click on Search User button
-	And I click on Go button
+	And I click on GoUser button
 	And I click on Settings option
 	And I click on Get Started button
 	And I click on Skip this step button

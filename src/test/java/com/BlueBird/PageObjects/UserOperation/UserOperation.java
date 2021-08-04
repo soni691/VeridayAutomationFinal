@@ -39,8 +39,8 @@ public class UserOperation extends BasePage{
 			webElementHelper.click(SearchUserButton);		
 	}
 	
-	/** click on GO button */
-	@FindBy(xpath = "//button[contains(text(),'Go')]")
+	/** click on GOUser button */
+	@FindBy(xpath = "//button[normalize-space()='Go']")
 	private WebElement Go;
 	public void clickonGo() throws InterruptedException {	
 			webElementHelper.click(Go);		
