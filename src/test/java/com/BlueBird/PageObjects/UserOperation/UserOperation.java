@@ -160,4 +160,31 @@ public class UserOperation extends BasePage{
 	public void clickononWorkFlow() throws InterruptedException {	
 			webElementHelper.click(TurnonWorkflow);		
 	}
+	
+
+	/** click on Website on button */
+	@FindBy(xpath = "//a[@id='aui_3_4_0_1_428']")
+	private WebElement WebsiteOn;
+	public void clickonWebsiteOn() throws InterruptedException {	
+			webElementHelper.click(WebsiteOn);		
+	}
+	
+	/** click on enter website ONLINE textbox */
+	@FindBy(xpath = "//input[@id='da-action-confirm-input']")
+	private WebElement SiteOnline;
+	public void clickonSiteOnline() throws InterruptedException {	
+			webElementHelper.click(SiteOnline);		
+	}
+	
+	/** enter text ONLINE*/
+	public void setWebsiteOnlineText(String wtext) throws InterruptedException {	
+		webElementHelper.TypeInto(SiteOnline, wtext);		
+    }
+	
+	/** Click on Yes set website on button */
+	@FindBy(xpath = "//button[normalize-space()='Yes, set Website Online']")
+	private WebElement TurnonWebsite;
+	public void clickononTurnonWebsite() throws InterruptedException {	
+			webElementHelper.click(TurnonWebsite);		
+	}
 }

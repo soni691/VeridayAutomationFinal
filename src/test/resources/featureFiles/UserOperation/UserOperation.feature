@@ -35,4 +35,16 @@ Scenario: Turn Workflow on scenario
 	And I click on Turn Workflow on option
 	And I enter text "WORKFLOWON"
 	And I click on YesturnOnWorkflow button
-	
+
+@smoke @RegressionTest
+Scenario: Turn Website on scenario
+	When I enter admin user name
+	And I enter admin password
+	And I click on login button
+	And I click on AdminHQ button
+	And I enter Hub Email
+	And I click on SearchHub button
+	And I click on Action button
+	And I click on Turn Website on option
+	And I enter Website text "ONLINE"
+	And I click on YesSetWebsiteOnline button

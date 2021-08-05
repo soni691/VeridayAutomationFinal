@@ -105,6 +105,21 @@ public class UserOperationStepDefinition {
 	@And("^I click on YesturnOnWorkflow button$")
 	public void i_click_on_yesturnon_button() throws Throwable {
 		useropepage.clickononWorkFlow();
+	}
+	
+	@And("^I click on Turn Website on option$")
+	public void I_click_on_WebsiteOn_button() throws Throwable {
+		useropepage.clickononTurnonWebsite();
+	}
+	
+	@And("^I enter Website text \"([^\"]*)\"$")
+	public void I_enter_tet_website(String wtext) throws Throwable {
+		useropepage.setWebsiteOnlineText(wtext);
+	}
+	
+	@And("^I click on YesSetWebsiteOnline button$")
+	public void i_click_on_yessiteon_button() throws Throwable {
+		useropepage.clickonWebsiteOn();
 	    
 	}
 }
