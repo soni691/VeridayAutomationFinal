@@ -163,7 +163,7 @@ public class UserOperation extends BasePage{
 	
 
 	/** click on Website on button */
-	@FindBy(xpath = "//a[@id='aui_3_4_0_1_428']")
+	@FindBy(xpath = "//a[normalize-space()='Set Online']")
 	private WebElement WebsiteOn;
 	public void clickonWebsiteOn() throws InterruptedException {	
 			webElementHelper.click(WebsiteOn);		
@@ -184,7 +184,7 @@ public class UserOperation extends BasePage{
 	/** Click on Yes set website on button */
 	@FindBy(xpath = "//button[normalize-space()='Yes, set Website Online']")
 	private WebElement TurnonWebsite;
-	public void clickononTurnonWebsite() throws InterruptedException {	
+	public void clickonTurnonWebsite() throws InterruptedException {	
 			webElementHelper.click(TurnonWebsite);		
 	}
 }

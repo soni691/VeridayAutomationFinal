@@ -34,7 +34,8 @@ import cucumber.api.junit.Cucumber;
 				//"classpath:featureFiles/OrganizationalGroups/OrganizationalGroups.feature"
 				//"classpath:featureFiles/HomePage/HomePage.feature",
 				//"classpath:featureFiles/DigitalWorkSpace/DigitalWorkSpace.feature"
-				"classpath:featureFiles/UserOperation/UserOperation.feature"
+				"classpath:featureFiles/UserOperation/UserOperation.feature",
+				"classpath:featureFiles/WebSiteOperation/WebSiteOperation.feature"
 		},
 		tags = { "@smoke","@RegressionTest"},
 		glue = { "com.BlueBird.StepDefinition" },

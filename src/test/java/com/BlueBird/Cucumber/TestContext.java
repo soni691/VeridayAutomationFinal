@@ -20,6 +20,7 @@ import com.BlueBird.PageObjects.OrganizationGroups.OrganizationalGroups;
 
 import com.BlueBird.PageObjects.UserManager.UserManager;
 import com.BlueBird.PageObjects.UserOperation.UserOperation;
+import com.BlueBird.PageObjects.WebsiteOperation.WebSiteOperation;
 import com.BlueBird.Util.Constants;
 import com.BlueBird.Util.DriverDetail;
 
@@ -59,6 +60,8 @@ public class TestContext {
 	private AdminHQ adminHQPage;
 	
 	private UserOperation UserOperationPage;
+	
+	private WebSiteOperation webSiteOperation;
 	/**
 	 * Instantiates a new test context.
 	 */
@@ -148,5 +151,9 @@ public class TestContext {
 		UserOperationPage =new UserOperation(this.driver, this.webElementHelper);
 		return UserOperationPage;
 	}
-
+	
+	public WebSiteOperation getWebsiteOperation() {
+		webSiteOperation =new WebSiteOperation(this.driver, this.webElementHelper);
+		return webSiteOperation;
+	}
 }

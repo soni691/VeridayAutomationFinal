@@ -109,7 +109,7 @@ public class UserOperationStepDefinition {
 	
 	@And("^I click on Turn Website on option$")
 	public void I_click_on_WebsiteOn_button() throws Throwable {
-		useropepage.clickononTurnonWebsite();
+		useropepage.clickonWebsiteOn();
 	}
 	
 	@And("^I enter Website text \"([^\"]*)\"$")
@@ -119,7 +119,7 @@ public class UserOperationStepDefinition {
 	
 	@And("^I click on YesSetWebsiteOnline button$")
 	public void i_click_on_yessiteon_button() throws Throwable {
-		useropepage.clickonWebsiteOn();
+		useropepage.clickonTurnonWebsite();
 	    
 	}
 }
