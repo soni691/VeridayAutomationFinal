@@ -28,8 +28,10 @@ public class UserOperationStepDefinition {
 		useropepage.clickonSearchUserButton();
 	}
 	
-	@And("^I click on GoUser button$") public void I_click_on_Go_button() throws Throwable { 
-		useropepage.clickonGo(); }
+	@And("^I click on GoUser button$")
+	public void I_click_on_Go_button() throws Throwable { 
+		useropepage.clickonGo(); 
+	}
 	 
 	
 	@And("^I click on Settings option$")

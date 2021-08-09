@@ -1,5 +1,6 @@
 package com.BlueBird.PageObjects.UserOperation;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,6 +39,7 @@ public class UserOperation extends BasePage{
 	@FindBy(xpath = "//button[normalize-space()='Search Users']")
 	private WebElement SearchUserButton;
 	public void clickonSearchUserButton() throws InterruptedException {	
+			waithelper.WaitForElementToBeClickable(SearchUserButton);
 			webElementHelper.click(SearchUserButton);		
 	}
 	
@@ -45,9 +47,12 @@ public class UserOperation extends BasePage{
 	@FindBy(xpath = "//button[normalize-space()='Go']")
 	private WebElement Go;
 	public void clickonGo() throws InterruptedException {	
-			webElementHelper.click(Go);		
-	}
+			ThreadSleep(3000);
+			waithelper.WaitForElementToBeClickable(Go);
+			//waithelper.WaitForElementEnabled(Go);
+			webElementHelper.click(Go);	
 	
+	}
 	/** click on Settings option */
 	@FindBy(xpath = "//img[@alt='Settings']")
 	private WebElement Settings;
