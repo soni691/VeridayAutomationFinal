@@ -77,6 +77,7 @@ public class WebSiteOperation extends BasePage {
 		public void clickonCreateForm() throws InterruptedException {		
 				waithelper.WaitForElementToBeClickable(CreateForm);
 				webElementHelper.click(CreateForm);
+				ThreadSleep(2000);
 		}
 		
 		/** identify form title textbox */
@@ -214,10 +215,15 @@ public class WebSiteOperation extends BasePage {
 			webElementHelper.TypeInto(option1, fdoption1);
 		}
 		
+		/**identify include blank option of dropdown*/
+		@FindBy(xpath="//input[@data-rv-checked='model.field_options.include_blank_option']")
+		private WebElement DropdownBlank;
+		
 		/** enter dropdown option2*/
 		public void setDropdownoption2(String fdoption2) {
 			webElementHelper.click(option2);
 			webElementHelper.TypeInto(option2, fdoption2);
+			webElementHelper.click(DropdownBlank);
 		}
 		
 		/** identify Submit for Approval option */
@@ -343,6 +349,13 @@ public class WebSiteOperation extends BasePage {
 		private WebElement EventDateDone;
 		public void clickonDone() throws InterruptedException {	
 				webElementHelper.click(EventDateDone);		
+		}
+		
+		/** identify publish update button */
+		@FindBy(xpath = "//i[@class='icon-ok icon-white']")
+		private WebElement PublishUpdae;
+		public void clickonPublishUpdate() throws InterruptedException {	
+				webElementHelper.click(PublishUpdae);		
 		}
 		
 }

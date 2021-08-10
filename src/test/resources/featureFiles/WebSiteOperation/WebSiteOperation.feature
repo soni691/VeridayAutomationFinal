@@ -17,8 +17,9 @@ Scenario: Create new Update scenario
 	And I click on Create New Update button
 	And I enter Update title "AutomationUpdate"
 	And I click on SaveChanges button
+	And I click on Publish Update button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -50,7 +51,7 @@ Scenario: Create new Form scenario
 	And I click on NextStep button
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Event scenario
 	When I enter admin user name
 	And I enter admin password

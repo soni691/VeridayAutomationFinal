@@ -35,7 +35,7 @@ public class WebSiteOperationDefinition {
 	
 	@And("^I click on Create New form button$")
 	public void I_click_on_Create_New_form_button() throws Throwable {
-		websiteoperation.clickonCreateForm();;	
+		websiteoperation.clickonCreateForm();
 	}
 	
 	@And("^I enter Form title \"([^\"]*)\"$")
@@ -153,5 +153,10 @@ public class WebSiteOperationDefinition {
 		websiteoperation.clickonEventEndDate();
 		websiteoperation.setEndDate();
 		websiteoperation.clickonDone();
+	}
+	
+	@And("^I click on Publish Update button$")
+	public void I_click_on_publish_update() throws Throwable {
+		websiteoperation.clickonPublishUpdate();;	
 	}
 }
