@@ -119,4 +119,39 @@ public class WebSiteOperationDefinition {
 	public void I_click_on_submit_form() throws Throwable {
 		websiteoperation.clickonSubmitForm();;	
 	}
+	
+	@And("^I click on Event option$")
+	public void I_click_on_event_option() throws Throwable {
+		websiteoperation.clickonEventsOption();;	
+	}
+	
+	@And("^I click on Create New Event button$")
+	public void I_click_on_create_new_event() throws Throwable {
+		websiteoperation.clickonCreateEvent();	
+	}
+	
+	@And("^I enter Event name \"([^\"]*)\"$")
+	public void I_enter_event_name(String evtitle) throws Throwable {
+		websiteoperation.clickonEventTitle();
+		websiteoperation.setEventTitle(evtitle);	
+	}
+	
+	@And("^I enter Event description \"([^\"]*)\"$")
+	public void I_enter_event_descrption(String evntdesc) throws Throwable {
+		websiteoperation.clickonEventDesc();
+		websiteoperation.setEventDescription(evntdesc);	
+	}
+	
+	@And("^I enter Event link \"([^\"]*)\"$")
+	public void I_enter_event_link(String evlink) throws Throwable {
+		websiteoperation.clickonEventlink();
+		websiteoperation.setEventLink(evlink);	
+	}
+	
+	@And("^I select Event End date$")
+	public void I_enter_event_end_date() throws Throwable {
+		websiteoperation.clickonEventEndDate();
+		websiteoperation.setEndDate();
+		websiteoperation.clickonDone();
+	}
 }

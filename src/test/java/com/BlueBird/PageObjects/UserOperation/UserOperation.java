@@ -39,6 +39,7 @@ public class UserOperation extends BasePage{
 	@FindBy(xpath = "//button[normalize-space()='Search Users']")
 	private WebElement SearchUserButton;
 	public void clickonSearchUserButton() throws InterruptedException {	
+			ThreadSleep(1000);
 			waithelper.WaitForElementToBeClickable(SearchUserButton);
 			webElementHelper.click(SearchUserButton);		
 	}
@@ -47,7 +48,7 @@ public class UserOperation extends BasePage{
 	@FindBy(xpath = "//button[normalize-space()='Go']")
 	private WebElement Go;
 	public void clickonGo() throws InterruptedException {	
-			ThreadSleep(3000);
+			ThreadSleep(2000);
 			waithelper.WaitForElementToBeClickable(Go);
 			//waithelper.WaitForElementEnabled(Go);
 			webElementHelper.click(Go);	

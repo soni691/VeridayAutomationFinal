@@ -3,7 +3,7 @@ Feature: WebSiteOperation.feature - To prepare test cases to add web contents in
 Background: 
 	Given the web application is open
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Update scenario
 	When I enter admin user name
 	And I enter admin password
@@ -18,7 +18,7 @@ Scenario: Create new Update scenario
 	And I enter Update title "AutomationUpdate"
 	And I click on SaveChanges button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -48,5 +48,23 @@ Scenario: Create new Form scenario
 	And I enter Dropdown2 option "AutomationFormDropdown2"
 	And I click on NextStep button
 	And I click on NextStep button
+	And I click on Submit For Approval button
+	
+@smoke @RegressionTest
+Scenario: Create new Event scenario
+	When I enter admin user name
+	And I enter admin password
+	And I click on login button
+	And I click on User Manager option
+	And I click on Search user textbox
+	And I enter User Name
+	And I click on Search User button
+	And I click on GoUser button
+	And I click on Event option
+	And I click on Create New Event button
+	And I enter Event name "AutomationEvent"
+	And I enter Event description "AutomationEventDescription"
+	And I enter Event link "http://www.automationevents.com/"
+	And I select Event End date
 	And I click on Submit For Approval button
 	

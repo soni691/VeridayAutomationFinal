@@ -226,4 +226,123 @@ public class WebSiteOperation extends BasePage {
 		public void clickonSubmitForm() throws InterruptedException {	
 				webElementHelper.click(SubmitForm);		
 		}
+		
+		/** identify event option */
+		@FindBy(xpath = "//img[@alt='Events']")
+		private WebElement Events;
+		public void clickonEventsOption() throws InterruptedException {	
+				webElementHelper.click(Events);		
+		}
+		
+		/** identify create new Event button */
+		@FindBy(xpath = "//a[normalize-space()='Add Event']")
+		private WebElement CreateEvent;
+		public void clickonCreateEvent() throws InterruptedException {		
+				waithelper.WaitForElementToBeClickable(CreateEvent);
+				webElementHelper.click(CreateEvent);
+		}
+		
+		/** identify Event title textbox */
+		@FindBy(xpath = "//input[@id='da-event-name']")
+		private WebElement EventTitle;
+		public void clickonEventTitle() throws InterruptedException {	
+				webElementHelper.click(EventTitle);		
+		}
+		
+		private String eappend;
+		/** enter event title name*/
+		public String setEventTitle(String evtitle) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+				//Getting current date
+				Calendar cal = Calendar.getInstance();
+				//Number of Days to add
+			    cal.add(Calendar.DAY_OF_MONTH, 0);
+				//Date after adding the days to the current date
+				String newDate = sdf.format(cal.getTime());
+				//String append;
+				eappend = evtitle+newDate;
+			    evtitle=eappend;
+			    webElementHelper.TypeInto(EventTitle, evtitle);
+				return evtitle;			
+		}
+		
+		/** identify event description textbox */
+		@FindBy(xpath = "//iframe[@title='Rich Text Editor, da-event-description']")
+		private WebElement EventDesc;
+		@FindBy(xpath="//body//p")
+		private WebElement Eventdesc1;
+		public void clickonEventDesc() throws InterruptedException {
+				driver.switchTo().frame(EventDesc);
+				webElementHelper.click(Eventdesc1);
+		}
+		
+		private String edescappend;
+		/** enter event description*/
+		public String setEventDescription(String evdesc) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+				//Getting current date
+				Calendar cal = Calendar.getInstance();
+				//Number of Days to add
+			    cal.add(Calendar.DAY_OF_MONTH, 0);
+				//Date after adding the days to the current date
+				String newDate = sdf.format(cal.getTime());
+				//String append;
+				edescappend = evdesc+newDate;
+			    evdesc=edescappend;
+			    webElementHelper.TypeInto(Eventdesc1, evdesc);
+			    driver.switchTo().defaultContent();
+				return evdesc;	
+		}
+		
+		/** identify event link textbox */
+		@FindBy(xpath = "//input[@id='da-event-url']")
+		private WebElement EventLink;
+		public void clickonEventlink() throws InterruptedException {	
+				webElementHelper.click(EventLink);		
+		}
+		
+		private String evlinkappend;
+		/** enter form link*/
+		public String setEventLink(String elinkdesc) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+				//Getting current date
+				Calendar cal = Calendar.getInstance();
+				//Number of Days to add
+			    cal.add(Calendar.DAY_OF_MONTH, 0);
+				//Date after adding the days to the current date
+				String newDate = sdf.format(cal.getTime());
+				//String append;
+				evlinkappend = elinkdesc+newDate;
+			    elinkdesc=evlinkappend;
+			    webElementHelper.TypeInto(EventLink, elinkdesc);
+			    return elinkdesc;
+		}
+		
+		/** identify event end date textbox */
+		@FindBy(xpath = "//input[@id='da-event-enddatepicker']")
+		private WebElement EventEndDate;
+		public void clickonEventEndDate() throws InterruptedException {	
+			 	webElementHelper.scrollToElement(EventEndDate);
+				webElementHelper.click(EventEndDate);		
+		}
+		
+		/** enter event end date*/
+		public void setEndDate() {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm zzz");
+			//Getting current date
+			Calendar cal = Calendar.getInstance();
+			//Number of Days to add
+		    cal.add(Calendar.DAY_OF_MONTH, 2);
+			//Date after adding the days to the current date
+			String newDate = sdf.format(cal.getTime());
+			webElementHelper.TypeInto(EventEndDate, newDate);
+		}
+		
+		/** identify event end date done button */
+		@FindBy(xpath = "//button[normalize-space()='Done']")
+		private WebElement EventDateDone;
+		public void clickonDone() throws InterruptedException {	
+				webElementHelper.click(EventDateDone);		
+		}
+		
 }
