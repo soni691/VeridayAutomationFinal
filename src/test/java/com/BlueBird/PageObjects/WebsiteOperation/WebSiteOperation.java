@@ -358,4 +358,87 @@ public class WebSiteOperation extends BasePage {
 				webElementHelper.click(PublishUpdae);		
 		}
 		
+		/** identify poll option */
+		@FindBy(xpath = "//img[@alt='Polls']")
+		private WebElement PollOption;
+		public void clickonPollOption() throws InterruptedException {	
+				webElementHelper.click(PollOption);		
+		}
+		
+		/** identify create new poll button */
+		@FindBy(xpath = "//a[normalize-space()='Add Poll']")
+		private WebElement CreatePoll;
+		public void clickonCreatePoll() throws InterruptedException {	
+				webElementHelper.click(CreatePoll);		
+		}
+		
+		/** identify poll name textbox */
+		@FindBy(xpath = "//input[@id='da-poll-name']")
+		private WebElement PollTitle;
+		public void clickonPollTitle() throws InterruptedException {	
+				webElementHelper.click(PollTitle);		
+		}
+		
+		private String pappend;
+		/** enter poll description*/
+		public String setPollTitle(String ptitle) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+				//Getting current date
+				Calendar cal = Calendar.getInstance();
+				//Number of Days to add
+			    cal.add(Calendar.DAY_OF_MONTH, 0);
+				//Date after adding the days to the current date
+				String newDate = sdf.format(cal.getTime());
+				//String append;
+				pappend = ptitle+newDate;
+			    ptitle=pappend;
+			    webElementHelper.TypeInto(PollTitle, ptitle);
+				return ptitle;			
+		}
+		
+		/** identify add poll answer button */
+		@FindBy(xpath = "//button[normalize-space()='Add Answer']")
+		private WebElement AddPollAnswer;
+		public void clickonAddPollAnswer() throws InterruptedException {	
+				webElementHelper.click(AddPollAnswer);		
+		}
+		/** identify poll description textbox */
+		@FindBy(xpath = "//textarea[@id='da-poll-description']")
+		private WebElement PollDesc;
+		public void clickonPollsDesc() throws InterruptedException {	
+				webElementHelper.click(PollDesc);		
+		}
+		
+		private String pdappend;
+		/** enter form description*/
+		public String setPollDescription(String pdesc) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+				//Getting current date
+				Calendar cal = Calendar.getInstance();
+				//Number of Days to add
+			    cal.add(Calendar.DAY_OF_MONTH, 0);
+				//Date after adding the days to the current date
+				String newDate = sdf.format(cal.getTime());
+				//String append;
+				pdappend = pdesc+newDate;
+			    pdesc=pappend;
+			    webElementHelper.TypeInto(PollDesc, pdesc);
+				return pdesc;			
+		}
+		
+		/** click & enter poll answer1 textbox */
+		@FindBy(xpath = "(//input[@placeholder='Answers'])[1]")
+		private WebElement PollAnswer1;
+		public void setPoll1Answer1(String panswer1) throws InterruptedException {	
+				webElementHelper.click(PollAnswer1);		
+				webElementHelper.TypeInto(PollAnswer1, panswer1);
+		}
+		
+		/** click & enter poll answer2 textbox */
+		@FindBy(xpath = "(//input[@placeholder='Answers'])[2]")
+		private WebElement PollAnswer2;
+		public void setPoll1Answer2(String panswer2) throws InterruptedException {	
+				webElementHelper.click(PollAnswer2);		
+				webElementHelper.TypeInto(PollAnswer2, panswer2);
+		}
 }

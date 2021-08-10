@@ -159,4 +159,40 @@ public class WebSiteOperationDefinition {
 	public void I_click_on_publish_update() throws Throwable {
 		websiteoperation.clickonPublishUpdate();;	
 	}
+	
+	@And("^I click on Poll option$")
+	public void I_click_on_poll_option() throws Throwable {
+		websiteoperation.clickonPollOption();;	
+	}
+	
+	@And("^I click on Create New Poll button$")
+	public void I_click_on_create_new_poll() throws Throwable {
+		websiteoperation.clickonCreatePoll();	
+	}
+	
+	@And("^I enter Poll name \"([^\"]*)\"$")
+	public void I_enter_poll_name(String pollname) throws Throwable {
+		websiteoperation.setPollTitle(pollname);	
+	}
+	
+	@And("^I enter Poll description \"([^\"]*)\"$")
+	public void I_enter_poll_description(String polldesc) throws Throwable {
+		websiteoperation.clickonPollsDesc();
+		websiteoperation.setPollDescription(polldesc);	
+	}
+	
+	@And("^I click on Add Answer button$")
+	public void I_click_on_add_answer_button() throws Throwable {
+		websiteoperation.clickonAddPollAnswer();
+	}
+	
+	@And("^I enter Poll Answer1 \"([^\"]*)\"$")
+	public void I_enter_poll_answer1(String pollanswer1) throws Throwable {
+		websiteoperation.setPoll1Answer1(pollanswer1);	
+	}
+	
+	@And("^I enter Poll Answer2 \"([^\"]*)\"$")
+	public void I_enter_poll_answer2(String ftitle) throws Throwable {
+		websiteoperation.setPoll1Answer2(ftitle);	
+	}
 }

@@ -19,7 +19,7 @@ Scenario: Create new Update scenario
 	And I click on SaveChanges button
 	And I click on Publish Update button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -69,3 +69,22 @@ Scenario: Create new Event scenario
 	And I select Event End date
 	And I click on Submit For Approval button
 	
+@smoke @RegressionTest
+Scenario: Create new Poll scenario
+	When I enter admin user name
+	And I enter admin password
+	And I click on login button
+	And I click on User Manager option
+	And I click on Search user textbox
+	And I enter User Name
+	And I click on Search User button
+	And I click on GoUser button
+	And I click on Poll option
+	And I click on Create New Poll button
+	And I enter Poll name "AutomationPoll"
+	And I enter Poll description "AutomationPollDescription"
+	And I click on Add Answer button
+	And I enter Poll Answer1 "Poll1"
+	And I click on Add Answer button
+	And I enter Poll Answer2 "Poll2"
+	And I click on Submit For Approval button
