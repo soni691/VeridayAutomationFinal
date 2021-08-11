@@ -536,4 +536,68 @@ public class WebSiteOperation extends BasePage {
 		public void clickonUpdateGadget() {
 			webElementHelper.click(UpdateGadget);
 		}
+		
+		/** identify Blog option */
+		@FindBy(xpath = "//img[@alt='Blog']")
+		private WebElement BlogOption;
+		public void clickonBlogOption() throws InterruptedException {	
+				webElementHelper.click(BlogOption);		
+		}
+		
+		/** identify activate your blog button */
+		@FindBy(xpath = "//a[normalize-space()='Activate your blog now!']")
+		private WebElement ActivateBlog;
+		public void clickonActivateBlog() throws InterruptedException {	
+				webElementHelper.click(ActivateBlog);		
+		}
+		
+		/** identify create new blog button */
+		@FindBy(xpath = "//a[normalize-space()='Add Blog Post']")
+		private WebElement CreateBlog;
+		public void clickonCreateBlog() throws InterruptedException {	
+				webElementHelper.click(CreateBlog);		
+		}
+		
+		/** click & enter blog title textbox */
+		@FindBy(xpath = "//input[@id='da-blog-title']")
+		private WebElement BlogTitle;
+		public void setBlogTitle(String btitle) throws InterruptedException {	
+				webElementHelper.click(BlogTitle);		
+				webElementHelper.TypeInto(BlogTitle, btitle);
+		}
+		
+		/** identify blog description textbox */
+		@FindBy(xpath = "//iframe[@title='Rich Text Editor, ckeditor-edit-widget']")
+		private WebElement BlogDesc;
+		@FindBy(xpath="//html//body")
+		private WebElement Blogdesc1;
+		public void clickonBlogDesc() throws InterruptedException {
+				driver.switchTo().frame(BlogDesc);
+				webElementHelper.click(Blogdesc1);
+		}
+		
+		private String blogdescappend;
+		/** enter blog description*/
+		public String setBlogDescription(String blgdesc) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+				//Getting current date
+				Calendar cal = Calendar.getInstance();
+				//Number of Days to add
+			    cal.add(Calendar.DAY_OF_MONTH, 0);
+				//Date after adding the days to the current date
+				String newDate = sdf.format(cal.getTime());
+				//String append;
+				blogdescappend = blgdesc+newDate;
+			    blgdesc=blogdescappend;
+			    webElementHelper.TypeInto(Blogdesc1, blgdesc);
+			    driver.switchTo().defaultContent();
+				return blgdesc;	
+		}
+		
+		/** identify estate planning category */
+		@FindBy(xpath = "//label[normalize-space()='Estate planning']")
+		private WebElement EstatePlaningCat;
+		public void clickonEstatePLaningCat() throws InterruptedException {	
+				webElementHelper.click(EstatePlaningCat);		
+		}
 }

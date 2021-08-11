@@ -336,7 +336,6 @@ public class UserManager extends BasePage {
 	@FindBy(xpath = "//p[text()='Saved')]")
 	private WebElement PUserCreatedpopup;
 	public void pUserpopup() {
-
 		webElementHelper.isElementDisplayed(PUserCreatedpopup);
 	}
 	

@@ -255,4 +255,35 @@ public class WebSiteOperationDefinition {
 	public void I_click_on_update_save() throws Throwable {
 		websiteoperation.clickonUpdateSave();	
 	}
+	
+	@And("^I click on Blog option$")
+	public void I_click_on_blog_option() throws Throwable {
+		websiteoperation.clickonBlogOption();	
+	}
+	
+	@And("^I click on Activate your blog now button$")
+	public void I_click_on_activate_blog() throws Throwable {
+		websiteoperation.clickonActivateBlog();	
+	}
+	
+	@And("^I click on Add new Blog button$")
+	public void I_click_on_add_blog() throws Throwable {
+		websiteoperation.clickonCreateBlog();	
+	}
+	
+	@And("^I enter Blog title \"([^\"]*)\"$")
+	public void I_enter_blog_title(String btitle) throws Throwable {
+		websiteoperation.setBlogTitle(btitle);	
+	}
+	
+	@And("^I enter Blog description \"([^\"]*)\"$")
+	public void I_enter_blog_description(String bdesc) throws Throwable {
+		websiteoperation.clickonBlogDesc();
+		websiteoperation.setBlogDescription(bdesc);	
+	}
+	
+	@And("^I select category Estate planning$")
+	public void I_select_estate_category() throws Throwable {
+		websiteoperation.clickonEstatePLaningCat();	
+	}
 }
