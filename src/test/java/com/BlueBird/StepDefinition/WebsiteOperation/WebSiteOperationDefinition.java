@@ -230,4 +230,29 @@ public class WebSiteOperationDefinition {
 	public void I_click_on_poll_save() throws Throwable {
 		websiteoperation.clickonPollSave();;	
 	}
+	
+	@And("^I click on Browse button$")
+	public void I_click_on_browse() throws Throwable {
+		websiteoperation.clickonWebsiteBrowse();	
+	}
+	
+	@And("^I click on Web Gadgets option$")
+	public void I_click_on_web_gadgets() throws Throwable {
+		websiteoperation.clickonWebGadget();	
+	}
+	
+	@And("^I click on Updates option$")
+	public void I_click_on_updates_option() throws Throwable {
+		websiteoperation.clickonUpdateOption();	
+	}
+	
+	@And("^I click on WebGadget Add button$")
+	public void I_click_on_web_gadget_add() throws Throwable {
+		websiteoperation.clickonAddWebGagdet();	
+	}
+	
+	@And("^I click on Update Save button$")
+	public void I_click_on_update_save() throws Throwable {
+		websiteoperation.clickonUpdateSave();	
+	}
 }

@@ -3,7 +3,7 @@ Feature: WebSiteOperation.feature - To prepare test cases to add web contents in
 Background: 
 	Given the web application is open
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Update scenario
 	When I enter admin user name
 	And I enter admin password
@@ -19,7 +19,7 @@ Scenario: Create new Update scenario
 	And I click on SaveChanges button
 	And I click on Publish Update button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -51,7 +51,7 @@ Scenario: Create new Form scenario
 	And I click on NextStep button
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Event scenario
 	When I enter admin user name
 	And I enter admin password
@@ -69,7 +69,7 @@ Scenario: Create new Event scenario
 	And I select Event End date
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Poll scenario
 	When I enter admin user name
 	And I enter admin password
@@ -100,11 +100,16 @@ Scenario: Add web content on website scenario
 	And I click on Search User button
 	And I click on GoUser button
 	And I click on MyWebsite option
-	And I click on Add WebContent button
-	And I click on Add Forms option
-	And I click on Webcontent Save button
-	And I click on Add WebContent button
-	And I click on Add Events option
-	And I click on Add WebContent button
-	And I click on Polls option
-	And I click on Poll Save button
+#	And I click on Add WebContent button
+#	And I click on Add Forms option
+#	And I click on Webcontent Save button
+#	And I click on Add WebContent button
+#	And I click on Add Events option
+#	And I click on Add WebContent button
+#	And I click on Polls option
+#	And I click on Poll Save button
+	And I click on Browse button
+	And I click on Web Gadgets option
+	And I click on Updates option
+	And I click on WebGadget Add button
+	And I click on Update Save button

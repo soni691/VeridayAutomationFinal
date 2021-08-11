@@ -27,9 +27,10 @@ public class WebSiteOperation extends BasePage {
 		String currenturl=driver.getCurrentUrl();
 	
 		/** identify update option */
-		@FindBy(xpath = "//img[@alt='Updates']")
+		@FindBy(xpath = "//a[normalize-space()='Updates']")
 		private WebElement UpdateOption;
 		public void clickonUpdateOption() throws InterruptedException {	
+				webElementHelper.scrollToElement(UpdateOption);
 				webElementHelper.click(UpdateOption);		
 		}
 
@@ -488,6 +489,11 @@ public class WebSiteOperation extends BasePage {
 			webElementHelper.click(SaveWebContent);
 		}
 		
+		public void clickonUpdateSave() {
+			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			webElementHelper.click(RGMPWebcontentSave);
+		}
+		
 		/** identify add events on website option */
 		@FindBy(xpath = "//a[normalize-space()='Events']")
 		private WebElement WebsiteEvent;
@@ -500,5 +506,34 @@ public class WebSiteOperation extends BasePage {
 		private WebElement WebsitePoll;
 		public void clickonWebsitepoll() throws InterruptedException {	
 				webElementHelper.click(WebsitePoll);		
+		}
+		
+		/** click on add web gadget button */
+		@FindBy(xpath = "//button[normalize-space()='Add']")
+		private WebElement AddWebGadget;
+		public void clickonAddWebGagdet() {
+			webElementHelper.click(AddWebGadget);
+			ThreadSleep(8000);
+		}
+		
+		/** click on website browse button */
+		@FindBy(xpath = "//*[@id=\"da-app-menu\"]/div[3]/a")
+		private WebElement WebsiteBrowse;
+		public void clickonWebsiteBrowse() {
+			webElementHelper.click(WebsiteBrowse);
+		}
+		
+		/** click on Web Gadget button */
+		@FindBy(xpath = "//a[normalize-space()='Web Gadgets']")
+		private WebElement WebGadget;
+		public void clickonWebGadget() {
+			webElementHelper.click(WebGadget);
+		}
+		
+		/** click on web gadget update option */
+		@FindBy(xpath = "//a[normalize-space()='Updates']")
+		private WebElement UpdateGadget;
+		public void clickonUpdateGadget() {
+			webElementHelper.click(UpdateGadget);
 		}
 }
