@@ -195,4 +195,39 @@ public class WebSiteOperationDefinition {
 	public void I_enter_poll_answer2(String ftitle) throws Throwable {
 		websiteoperation.setPoll1Answer2(ftitle);	
 	}
+	
+	@And("^I click on MyWebsite option$")
+	public void I_click_on_mywebsite_option() throws Throwable {
+		websiteoperation.clickonMyWebsite();	
+	}
+	
+	@And("^I click on Add WebContent button")
+	public void I_click_on_add_webcontent() throws Throwable {
+		websiteoperation.clickonAddwebcontent();
+	}
+	
+	@And("^I click on Add Forms option$")
+	public void I_click_on_add_forms_option() throws Throwable {
+		websiteoperation.clickonWebsiteform();
+	}
+	
+	@And("^I click on Webcontent Save button$")
+	public void I_click_on_webcontent_save() throws Throwable {
+		websiteoperation.clickonSaveWebcontent();	
+	}
+	
+	@And("^I click on Add Events option$")
+	public void I_click_on_add_events_option() throws Throwable {
+		websiteoperation.clickonWebsiteevent();	
+	}
+	
+	@And("^I click on Polls option$")
+	public void I_click_on_polls_option() throws Throwable {
+		websiteoperation.clickonWebsitepoll();	
+	}
+	
+	@And("^I click on Poll Save button$")
+	public void I_click_on_poll_save() throws Throwable {
+		websiteoperation.clickonPollSave();;	
+	}
 }

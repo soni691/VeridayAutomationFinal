@@ -19,7 +19,7 @@ Scenario: Create new Update scenario
 	And I click on SaveChanges button
 	And I click on Publish Update button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -51,7 +51,7 @@ Scenario: Create new Form scenario
 	And I click on NextStep button
 	And I click on Submit For Approval button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Event scenario
 	When I enter admin user name
 	And I enter admin password
@@ -88,3 +88,23 @@ Scenario: Create new Poll scenario
 	And I click on Add Answer button
 	And I enter Poll Answer2 "Poll2"
 	And I click on Submit For Approval button
+	
+@smoke @RegressionTest
+Scenario: Add web content on website scenario
+	When I enter admin user name
+	And I enter admin password
+	And I click on login button
+	And I click on User Manager option
+	And I click on Search user textbox
+	And I enter User Name
+	And I click on Search User button
+	And I click on GoUser button
+	And I click on MyWebsite option
+	And I click on Add WebContent button
+	And I click on Add Forms option
+	And I click on Webcontent Save button
+	And I click on Add WebContent button
+	And I click on Add Events option
+	And I click on Add WebContent button
+	And I click on Polls option
+	And I click on Poll Save button

@@ -125,7 +125,11 @@ public class UserManager extends BasePage {
 	@FindBy(xpath = "//input[@id='user-title-filter1']")
 	private WebElement Jobtitle2;
 	public void enterJobTitle2() {
-		webElementHelper.TypeInto(Jobtitle2, generateData.generateRandomString(5));
+		System.out.println(currenturl);
+		if(currenturl.contains("clic.qa"))
+		{
+			webElementHelper.TypeInto(Jobtitle2, generateData.generateRandomString(5));
+		}
 	}
 	
 	@FindBy(xpath = "//select[@id='branchSelector']")
@@ -136,12 +140,15 @@ public class UserManager extends BasePage {
 	@FindBy(xpath = "//option[contains(text(),'  Veriday Inc')]")
 	private WebElement LocationDemoQA;
 	
+	@FindBy(xpath="//option[contains(text(),'  Burlington')]")
+	private WebElement LocationRGMP;
+	
 	public void enterLocation() throws InterruptedException {
 		webElementHelper.click(Location);
 		System.out.println(currenturl);
-		if(currenturl.contains("demo.qa")) {
-			webElementHelper.click(LocationDemoQA);
-			webElementHelper.click(Location);
+		if(currenturl.contains("rgmp.qa")) {
+			webElementHelper.click(LocationRGMP);
+			//webElementHelper.click(Location);
 		}
 		else if(currenturl.contains("clic.qa"))
 		{
@@ -163,6 +170,9 @@ public class UserManager extends BasePage {
 	@FindBy(xpath = "//button[@id='provincial-list']")
 	private WebElement StatesofRegistration;
 	
+	@FindBy(xpath="//input[@id='provincial-list']")
+	private WebElement InputStateRegistration;
+	
 	@FindBy(xpath = "//input[@value='AB']")
 	private WebElement AddPLicenseAB;
 	
@@ -171,8 +181,8 @@ public class UserManager extends BasePage {
 	
 	public void enterPLincense() throws InterruptedException {
 		System.out.println(currenturl);
-		if(currenturl.contains("demo.qa")) {
-			webElementHelper.TypeInto(StatesofRegistration, generateData.generateRandomNumber(5));
+		if(currenturl.contains("rgmp.qa")) {
+			webElementHelper.TypeInto(InputStateRegistration, generateData.generateRandomNumber(5));
 		}
 		else if(currenturl.contains("clic.qa"))
 		{

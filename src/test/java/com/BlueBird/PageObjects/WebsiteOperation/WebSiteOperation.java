@@ -441,4 +441,64 @@ public class WebSiteOperation extends BasePage {
 				webElementHelper.click(PollAnswer2);		
 				webElementHelper.TypeInto(PollAnswer2, panswer2);
 		}
+		
+		/** identify mywebsite option */
+		@FindBy(xpath = "//img[@alt='My Website']")
+		private WebElement MyWebsite;
+		public void clickonMyWebsite() throws InterruptedException {	
+				webElementHelper.click(MyWebsite);	
+				ThreadSleep(5000);
+		}
+		
+		/** identify add web content button */
+		@FindBy(xpath = "//a[@id='da-app-add-dropdown']")
+		private WebElement AddWebContent;
+		public void clickonAddwebcontent() throws InterruptedException {	
+				webElementHelper.click(AddWebContent);	
+				ThreadSleep(2000);
+				
+		}
+		
+		/** identify Add form on website option */
+		@FindBy(xpath = "//a[normalize-space()='Forms']")
+		private WebElement WebsiteForm;
+		public void clickonWebsiteform() throws InterruptedException {	
+				webElementHelper.click(WebsiteForm);		
+		}
+		
+		/**identify rgmp webcontent save button*/
+		@FindBy(xpath="//a[normalize-space()='Save']")
+		private WebElement RGMPWebcontentSave;		
+		
+		/** identify canada life webcontent save button */
+		@FindBy(xpath = "//button[normalize-space()='Save']")
+		private WebElement SaveWebContent;
+		public void clickonSaveWebcontent() throws InterruptedException {
+			String currentURL=driver.getCurrentUrl();
+			if(currentURL.contains("clic.qa")) {
+				webElementHelper.scrollToElement(SaveWebContent);
+				webElementHelper.click(SaveWebContent);		
+		}	else if(currentURL.contains("rgmp.qa")) {
+			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			webElementHelper.click(RGMPWebcontentSave);
+		}
+		}
+		
+		public void clickonPollSave() {
+			webElementHelper.click(SaveWebContent);
+		}
+		
+		/** identify add events on website option */
+		@FindBy(xpath = "//a[normalize-space()='Events']")
+		private WebElement WebsiteEvent;
+		public void clickonWebsiteevent() throws InterruptedException {	
+				webElementHelper.click(WebsiteEvent);		
+		}
+		
+		/** identify add polls on website option */
+		@FindBy(xpath = "//a[normalize-space()='Polls']")
+		private WebElement WebsitePoll;
+		public void clickonWebsitepoll() throws InterruptedException {	
+				webElementHelper.click(WebsitePoll);		
+		}
 }

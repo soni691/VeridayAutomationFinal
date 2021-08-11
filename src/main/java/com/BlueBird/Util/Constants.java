@@ -85,7 +85,7 @@ public class Constants {
 	public static final int EXPLICIT_WAIT = 30;
 	
 	/** The Constant EXPLICIT_WAIT. */
-	public static final int QUICK_EXPLICIT_WAIT = 10;
+	public static final int QUICK_EXPLICIT_WAIT = 15;
 	
 	/** The Constant PAGE_LOAD_TIMEOUT. */
 	public static final int PAGE_LOAD_TIMEOUT = 10;
