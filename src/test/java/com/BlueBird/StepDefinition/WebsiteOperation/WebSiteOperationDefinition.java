@@ -286,4 +286,14 @@ public class WebSiteOperationDefinition {
 	public void I_select_estate_category() throws Throwable {
 		websiteoperation.clickonEstatePLaningCat();	
 	}
+	
+	@And("^I click on Latest Blog Posts option$")
+	public void I_click_on_latest_blog_option() throws Throwable {
+		websiteoperation.clickonBlogGadget();	
+	}
+	
+	@And("^I click on Blog Save button$")
+	public void I_click_on_blog_save() throws Throwable {
+		websiteoperation.clickonBlogSave();	
+	}
 }

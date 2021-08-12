@@ -541,20 +541,22 @@ public class WebSiteOperation extends BasePage {
 		@FindBy(xpath = "//img[@alt='Blog']")
 		private WebElement BlogOption;
 		public void clickonBlogOption() throws InterruptedException {	
-				webElementHelper.click(BlogOption);		
+				webElementHelper.click(BlogOption);	
 		}
 		
 		/** identify activate your blog button */
 		@FindBy(xpath = "//a[normalize-space()='Activate your blog now!']")
 		private WebElement ActivateBlog;
 		public void clickonActivateBlog() throws InterruptedException {	
+				ThreadSleep(2000);
 				webElementHelper.click(ActivateBlog);		
 		}
 		
 		/** identify create new blog button */
 		@FindBy(xpath = "//a[normalize-space()='Add Blog Post']")
 		private WebElement CreateBlog;
-		public void clickonCreateBlog() throws InterruptedException {	
+		public void clickonCreateBlog() throws InterruptedException {
+			ThreadSleep(2000);
 				webElementHelper.click(CreateBlog);		
 		}
 		
@@ -599,5 +601,18 @@ public class WebSiteOperation extends BasePage {
 		private WebElement EstatePlaningCat;
 		public void clickonEstatePLaningCat() throws InterruptedException {	
 				webElementHelper.click(EstatePlaningCat);		
+		}
+		
+		/** click on web gadget Latest blog post option */
+		@FindBy(xpath = "//a[normalize-space()='Latest Blog Posts']")
+		private WebElement BlogGadget;
+		public void clickonBlogGadget() {
+			webElementHelper.click(BlogGadget);
+		}
+		
+		/**click on blog save button*/
+		public void clickonBlogSave() {
+			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			webElementHelper.click(RGMPWebcontentSave);
 		}
 }

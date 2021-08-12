@@ -107,7 +107,7 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Add web content on website scenario
 	When I enter admin user name
 	And I enter admin password
@@ -126,8 +126,13 @@ Scenario: Add web content on website scenario
 #	And I click on Add WebContent button
 #	And I click on Polls option
 #	And I click on Poll Save button
+#	And I click on Browse button
+#	And I click on Web Gadgets option
+#	And I click on Updates option
+#	And I click on WebGadget Add button
+#	And I click on Update Save button
 	And I click on Browse button
 	And I click on Web Gadgets option
-	And I click on Updates option
+	And I click on Latest Blog Posts option
 	And I click on WebGadget Add button
-	And I click on Update Save button
+	And I click on Blog Save button
