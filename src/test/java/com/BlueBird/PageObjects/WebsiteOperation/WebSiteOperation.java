@@ -473,7 +473,12 @@ public class WebSiteOperation extends BasePage {
 		
 		/**identify rgmp webcontent save button*/
 		@FindBy(xpath="//a[normalize-space()='Save']")
-		private WebElement RGMPWebcontentSave;		
+		private WebElement RGMPWebcontentSave;	
+		
+		public void clickonMemberSave() {
+			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			webElementHelper.click(RGMPWebcontentSave);
+		}
 		
 		/** identify canada life webcontent save button */
 		@FindBy(xpath = "//button[normalize-space()='Save']")
@@ -673,7 +678,7 @@ public class WebSiteOperation extends BasePage {
 			//Date after adding the days to the current date
 			String newDate = sdf.format(cal.getTime());
 			//String append;
-			mappend = membername+newDate;
+			Variables.teammemberfirstname= mappend = membername+newDate;
 			webElementHelper.TypeInto(MemberFirstName, mappend);
 			return membername;
 		}
@@ -691,9 +696,30 @@ public class WebSiteOperation extends BasePage {
 			//Date after adding the days to the current date
 			String newDate = sdf.format(cal.getTime());
 			//String append;
-			mlappend = memberlname+newDate;
+			Variables.teammemberlastname= mlappend = memberlname+newDate;
 			webElementHelper.TypeInto(MemberLastName, mlappend);
 			return memberlname;
 		}
 		
+		/** click on Team Member profile option on website */
+		@FindBy(xpath = "//a[contains(text(),'Team Member Profile')]")
+		private WebElement clickonWebsiteTeam;
+		public void clickonWebsiteTeamProfile() {
+			webElementHelper.click(clickonWebsiteTeam);
+		}
+		
+		/** identify dropdown of tem member profile*/
+		@FindBy(xpath = "//*[@class=\"configure-biography__form-select\"]/select")
+		private WebElement TeamMemberDrodown;
+		public void clickonTeamMemberDropdown() throws InterruptedException {	
+				webElementHelper.click(TeamMemberDrodown);		
+		}
+		
+		/** click on newly created team member */
+		@FindBy(xpath = "//*[@class=\"configure-biography__form-select\"]/select/option[2]")
+		private WebElement Member1;
+		public void clickonCreatedTeamMember() {
+			waithelper.WaitForElementToBeClickable(Member1);
+			webElementHelper.click(Member1);
+		}
 }

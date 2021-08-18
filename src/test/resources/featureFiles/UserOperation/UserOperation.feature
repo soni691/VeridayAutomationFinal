@@ -3,7 +3,7 @@ Feature: UserOperation.feature - To prepare test cases for User Operation
 Background: 
 	Given the web application is open
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Site scenario
 	When I enter admin user name
 	And I enter admin password

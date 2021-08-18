@@ -48,4 +48,8 @@ public class Variables {
 	
 	public static String eventname;
 	
+	public static String teammemberfirstname;
+	
+	public static String teammemberlastname;
+	
 }

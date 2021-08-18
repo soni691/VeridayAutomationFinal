@@ -336,4 +336,20 @@ public class WebSiteOperationDefinition {
 	    public void i_enter_team_member_last_name_something(String strArg2) throws Throwable {
 	        websiteoperation.setMemberLastName(strArg2);
 	    }
+	 
+	 @And("^I click on Team Member Profile$")
+	    public void i_click_on_team_member_profile() throws Throwable {
+	       websiteoperation.clickonWebsiteTeamProfile();
+	    }
+	 
+	 @And("^I select Team Member from user dropdown list$")
+	    public void i_select_team_member_from_user_dropdown_list() throws Throwable {
+	        websiteoperation.clickonTeamMemberDropdown();
+	        websiteoperation.clickonCreatedTeamMember();
+	    }
+	 
+	 @And("^I click on Team Member Save button$")
+	    public void i_click_on_team_member_save_button() throws Throwable {
+	        websiteoperation.clickonMemberSave();
+	    }
 }
