@@ -143,20 +143,19 @@ public class UserManager extends BasePage {
 	@FindBy(xpath="//option[contains(text(),'  Burlington')]")
 	private WebElement LocationRGMP;
 	
-	public void enterLocation() throws InterruptedException {
-		webElementHelper.click(Location);
-		System.out.println(currenturl);
+	//select location from location dropdown list//
+	public void enterLocation1(String location1, String location2) {
 		if(currenturl.contains("rgmp.qa")) {
-			webElementHelper.click(LocationRGMP);
-			//webElementHelper.click(Location);
-		}
-		else if(currenturl.contains("clic.qa"))
-		{
-			Thread.sleep(2000);
-			webElementHelper.click(LocationNiagra);
 			webElementHelper.click(Location);
+			String xpath = String.format("//option[contains(text(),'%s')]", location1);
+			System.out.println(xpath);
+			webElementHelper.click(webElementHelper.getElement(By.xpath(xpath)));
 		}
-		
+		else if (currenturl.contains("clic.qa")) {
+			webElementHelper.click(Location);
+			String xpath1 = String.format("//option[contains(text()='%s')]", location2);
+			webElementHelper.click(webElementHelper.getElement(By.xpath(xpath1)));
+		}
 	}
 	
 	//read location from config file

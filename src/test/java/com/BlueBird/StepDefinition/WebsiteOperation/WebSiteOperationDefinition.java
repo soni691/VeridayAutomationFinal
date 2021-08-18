@@ -1,9 +1,12 @@
 package com.BlueBird.StepDefinition.WebsiteOperation;
 
+import org.junit.Assert;
+
 import com.BlueBird.Cucumber.TestContext;
 import com.BlueBird.PageObjects.WebsiteOperation.WebSiteOperation;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 
 public class WebSiteOperationDefinition {
 	
@@ -296,4 +299,11 @@ public class WebSiteOperationDefinition {
 	public void I_click_on_blog_save() throws Throwable {
 		websiteoperation.clickonBlogSave();	
 	}
+	
+//	@Then("^I should see New Event is created$")
+//	public void newEventCreated(){
+//		//Assert.assertTrue("Event is not created",websiteoperation.newEventCreated());
+//		websiteoperation.VerifyNewEventName();
+//		
+//	}
 }

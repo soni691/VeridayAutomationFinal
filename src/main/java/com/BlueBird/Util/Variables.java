@@ -46,4 +46,6 @@ public class Variables {
 	
 	public static String accountemail;
 	
+	public static String eventname;
+	
 }

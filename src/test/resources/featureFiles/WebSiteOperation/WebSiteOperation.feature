@@ -69,6 +69,8 @@ Scenario: Create new Event scenario
 	And I select Event End date
 	And I click on Submit For Approval button
 	
+#	Then I should see New Event is created
+	
 @smoke1 @RegressionTest1
 Scenario: Create new Poll scenario
 	When I enter admin user name
@@ -89,7 +91,7 @@ Scenario: Create new Poll scenario
 	And I enter Poll Answer2 "Poll2"
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Blog scenario
 	When I enter admin user name
 	And I enter admin password
@@ -107,7 +109,7 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Add web content on website scenario
 	When I enter admin user name
 	And I enter admin password

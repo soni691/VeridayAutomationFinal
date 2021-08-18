@@ -15,6 +15,8 @@ import com.BlueBird.PageObjects.BasePage;
 import com.BlueBird.PageObjects.UserOperation.UserOperation;
 import com.BlueBird.Util.Variables;
 
+import junit.framework.Assert;
+
 public class WebSiteOperation extends BasePage {
 	private WaitHelper waithelper;
 	private UserOperation useropr;
@@ -269,9 +271,11 @@ public class WebSiteOperation extends BasePage {
 				//String append;
 				eappend = evtitle+newDate;
 			    evtitle=eappend;
+			    Variables.eventname=evtitle;
 			    webElementHelper.TypeInto(EventTitle, evtitle);
 				return evtitle;			
 		}
+
 		
 		/** identify event description textbox */
 		@FindBy(xpath = "//iframe[@title='Rich Text Editor, da-event-description']")
@@ -614,5 +618,15 @@ public class WebSiteOperation extends BasePage {
 		public void clickonBlogSave() {
 			webElementHelper.scrollToElement(RGMPWebcontentSave);
 			webElementHelper.click(RGMPWebcontentSave);
+		}
+		
+		/** identify event saved confirmation message */
+		@FindBy(xpath = "//p[contains(text(),'Event saved')]")
+		private WebElement EventSavedConfirmation;
+
+		public void newEventCreated() {
+			// TODO Auto-generated method stub
+			//return(webElementHelper.isElementDisplayedQuicker(EventSavedConfirmation));
+			
 		}
 }
