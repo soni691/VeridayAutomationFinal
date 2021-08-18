@@ -306,4 +306,34 @@ public class WebSiteOperationDefinition {
 //		websiteoperation.VerifyNewEventName();
 //		
 //	}
+	
+	 @And("^I click on My Profile option$")
+	 public void i_click_on_my_profile_option() throws Throwable {
+	        websiteoperation.clickonMyProfileOption();
+	 }
+	 
+	 @And("^I click on Team Members option$")
+	    public void i_click_on_team_members_option() throws Throwable {
+	        websiteoperation.clickonTeamMemberOption();
+	    }
+	 
+	 @And("^I click on Add Team Member button$")
+	    public void i_click_on_add_team_member_button() throws Throwable {
+	        websiteoperation.clickonCreateTeamMember();
+	    }
+	 
+	 @And("^I enter Team Member email$")
+	    public void i_enter_team_member_email() throws Throwable {
+	       websiteoperation.setTeamMemberEmail();
+	    }
+	 
+	 @And("^I enter Team Member First Name \"([^\"]*)\"$")
+	    public void i_enter_team_member_first_name_something(String strArg1) throws Throwable {
+	       websiteoperation.setMemberFirstName(strArg1);
+	    }
+	 
+	 @And("^I enter Team Member Last Name \"([^\"]*)\"$")
+	    public void i_enter_team_member_last_name_something(String strArg2) throws Throwable {
+	        websiteoperation.setMemberLastName(strArg2);
+	    }
 }

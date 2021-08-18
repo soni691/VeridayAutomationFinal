@@ -109,6 +109,24 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
+@smoke @RegressionTest	
+Scenario: Create new Team Member scenario
+	When I enter admin user name
+	And I enter admin password
+	And I click on login button
+	And I click on User Manager option
+	And I click on Search user textbox
+	And I enter User Name 
+	And I click on Search User button
+	And I click on GoUser button
+	And I click on My Profile option
+	And I click on Team Members option
+	And I click on Add Team Member button
+	And I enter Team Member email
+	And I enter Team Member First Name "Automation"
+	And I enter Team Member Last Name "TeamMember"
+	And I click on Submit For Approval button
+	
 @smoke1 @RegressionTest1
 Scenario: Add web content on website scenario
 	When I enter admin user name

@@ -626,7 +626,74 @@ public class WebSiteOperation extends BasePage {
 
 		public void newEventCreated() {
 			// TODO Auto-generated method stub
-			//return(webElementHelper.isElementDisplayedQuicker(EventSavedConfirmation));
-			
+			//return(webElementHelper.isElementDisplayedQuicker(EventSavedConfirmation));		
 		}
+		
+		/** identify My Profile option */
+		@FindBy(xpath = "//img[@alt='My Profile']")
+		private WebElement MyProfileOption;
+		public void clickonMyProfileOption() throws InterruptedException {	
+				webElementHelper.click(MyProfileOption);
+				ThreadSleep(3000);
+		}
+		
+		/** identify Team member option */
+		@FindBy(xpath = "//a[normalize-space()='Team Members']")
+		private WebElement TeamMemberOption;
+		public void clickonTeamMemberOption() throws InterruptedException {	
+				ThreadSleep(3000);
+				webElementHelper.click(TeamMemberOption);		
+		}
+		
+		/** identify create TeamMember button */
+		@FindBy(xpath = "//button[normalize-space()='Add Team Member']")
+		private WebElement CreateTeamMember;
+		public void clickonCreateTeamMember() throws InterruptedException {	
+				webElementHelper.click(CreateTeamMember);		
+		}
+		
+		/** click & enter team member email */
+		@FindBy(xpath = "//input[@id='member-email']")
+		private WebElement MemberEmail;
+		public void setTeamMemberEmail() {
+			webElementHelper.click(MemberEmail);
+			webElementHelper.TypeInto(MemberEmail,generateData.generateEmail(14));
+		}
+		
+		/** click & enter team member first name*/
+		@FindBy(xpath = "//input[@id='member-first-name']")
+		private WebElement MemberFirstName;
+		public String mappend;
+		public String setMemberFirstName(String membername) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+			//Getting current date
+			Calendar cal = Calendar.getInstance();
+			//Number of Days to add
+		    cal.add(Calendar.DAY_OF_MONTH, 0);
+			//Date after adding the days to the current date
+			String newDate = sdf.format(cal.getTime());
+			//String append;
+			mappend = membername+newDate;
+			webElementHelper.TypeInto(MemberFirstName, mappend);
+			return membername;
+		}
+		
+		/** click & enter team member last name*/
+		@FindBy(xpath = "//input[@id='member-last-name']")
+		private WebElement MemberLastName;
+		public String mlappend;
+		public String setMemberLastName(String memberlname) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmm");
+			//Getting current date
+			Calendar cal = Calendar.getInstance();
+			//Number of Days to add
+		    cal.add(Calendar.DAY_OF_MONTH, 0);
+			//Date after adding the days to the current date
+			String newDate = sdf.format(cal.getTime());
+			//String append;
+			mlappend = memberlname+newDate;
+			webElementHelper.TypeInto(MemberLastName, mlappend);
+			return memberlname;
+		}
+		
 }
