@@ -3,7 +3,7 @@ Feature: UserOperation.feature - To prepare test cases for User Operation
 Background: 
 	Given the web application is open
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Site scenario
 	When I enter admin user name
 	And I enter admin password
@@ -23,7 +23,7 @@ Scenario: Create new Site scenario
 	And I click on SiteGenerate button
 	And I click on Start your digital journey button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Turn Workflow on scenario
 	When I enter admin user name
 	And I enter admin password
@@ -36,7 +36,7 @@ Scenario: Turn Workflow on scenario
 	And I enter text "WORKFLOWON"
 	And I click on YesturnOnWorkflow button
 
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Turn Website on scenario
 	When I enter admin user name
 	And I enter admin password

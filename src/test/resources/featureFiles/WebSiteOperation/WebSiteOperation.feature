@@ -3,7 +3,7 @@ Feature: WebSiteOperation.feature - To prepare test cases to add web contents in
 Background: 
 	Given the web application is open
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Update scenario
 	When I enter admin user name
 	And I enter admin password
@@ -18,6 +18,8 @@ Scenario: Create new Update scenario
 	And I enter Update title "AutomationUpdate"
 	And I click on SaveChanges button
 	And I click on Publish Update button
+	
+	Then I should see New Update is created
 	
 @smoke @RegressionTest
 Scenario: Create new Form scenario
@@ -53,7 +55,7 @@ Scenario: Create new Form scenario
 	
 	Then I should see New Form is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Event scenario
 	When I enter admin user name
 	And I enter admin password
@@ -71,9 +73,9 @@ Scenario: Create new Event scenario
 	And I select Event End date
 	And I click on Submit For Approval button
 	
-#	Then I should see New Event is created
+	Then I should see New Event is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Poll scenario
 	When I enter admin user name
 	And I enter admin password
@@ -93,6 +95,8 @@ Scenario: Create new Poll scenario
 	And I enter Poll Answer2 "Poll2"
 	And I click on Submit For Approval button
 	
+	Then I should see New Poll is created
+	
 @smoke1 @RegressionTest1
 Scenario: Create new Blog scenario
 	When I enter admin user name
@@ -111,7 +115,7 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
-@smoke1 @RegressionTest1	
+@smoke @RegressionTest
 Scenario: Create new Team Member scenario
 	When I enter admin user name
 	And I enter admin password
@@ -129,7 +133,7 @@ Scenario: Create new Team Member scenario
 	And I enter Team Member Last Name "TeamMember"
 	And I click on Submit For Approval button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Add web content on website scenario
 	When I enter admin user name
 	And I enter admin password
@@ -140,24 +144,24 @@ Scenario: Add web content on website scenario
 	And I click on Search User button
 	And I click on GoUser button
 	And I click on MyWebsite option
-#	And I click on Add WebContent button
-#	And I click on Add Forms option
-#	And I click on Webcontent Save button
-#	And I click on Add WebContent button
-#	And I click on Add Events option
-#	And I click on Add WebContent button
-#	And I click on Polls option
-#	And I click on Poll Save button
-#	And I click on Browse button
-#	And I click on Web Gadgets option
-#	And I click on Updates option
-#	And I click on WebGadget Add button
-#	And I click on Update Save button
-#	And I click on Browse button
-#	And I click on Web Gadgets option
-#	And I click on Latest Blog Posts option
-#	And I click on WebGadget Add button
-#	And I click on Blog Save button
+	And I click on Add WebContent button
+	And I click on Add Forms option
+	And I click on Webcontent Save button
+	And I click on Add WebContent button
+	And I click on Add Events option
+	And I click on Add WebContent button
+	And I click on Polls option
+	And I click on Poll Save button
+	And I click on Browse button
+	And I click on Web Gadgets option
+	And I click on Updates option
+	And I click on WebGadget Add button
+	And I click on Update Save button
+	And I click on Browse button
+	And I click on Web Gadgets option
+	And I click on Latest Blog Posts option
+	And I click on WebGadget Add button
+	And I click on Blog Save button
 	And I click on Add WebContent button
 	And I click on Team Member Profile
 	And I select Team Member from user dropdown list

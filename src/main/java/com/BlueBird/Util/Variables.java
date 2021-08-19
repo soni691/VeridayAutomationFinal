@@ -54,4 +54,9 @@ public class Variables {
 	
 	public static String storedFormname;
 	
+	public static String storedUpdatename;
+	
+	public static String storedEventsname;
+	
+	public static String storedPollsname;
 }

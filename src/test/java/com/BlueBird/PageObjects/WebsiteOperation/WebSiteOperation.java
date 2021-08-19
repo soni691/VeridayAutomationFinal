@@ -61,10 +61,25 @@ public class WebSiteOperation extends BasePage {
 				//Date after adding the days to the current date
 				String newDate = sdf.format(cal.getTime());
 				//String append;
-				uappend = utitle+newDate;
+				Variables.storedUpdatename= uappend = utitle+newDate;
 			    utitle=uappend;
 			    webElementHelper.TypeInto(UpdateTitle, utitle);
 				return utitle;			
+		}
+		
+		/**store newly created update name*/
+		
+		public boolean storedUpdateName() {
+			ThreadSleep(5000);
+			String xpath = String.format("//td[text()='%s']",Variables.storedUpdatename);
+			String formtext=webElementHelper.getElementText(webElementHelper.getElement(By.xpath(xpath)));
+			if(formtext.contains(Variables.storedUpdatename)) {
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		
 		/** identify forms option */
@@ -107,8 +122,7 @@ public class WebSiteOperation extends BasePage {
 				return ftitle;			
 		}
 		
-		/**store newly created form name*/
-		
+		/**store newly created form name*/		
 		public boolean storedFormName() {
 			ThreadSleep(5000);
 			String xpath = String.format("//td[text()='%s']",Variables.storedFormname);
@@ -284,11 +298,25 @@ public class WebSiteOperation extends BasePage {
 				//Date after adding the days to the current date
 				String newDate = sdf.format(cal.getTime());
 				//String append;
-				eappend = evtitle+newDate;
-			    evtitle=eappend;
-			    Variables.eventname=evtitle;
+				Variables.storedEventsname= eappend = evtitle+newDate;
+				evtitle=eappend;
 			    webElementHelper.TypeInto(EventTitle, evtitle);
 				return evtitle;			
+		}
+		
+		/**store newly created event name*/
+		
+		public boolean storedEventName() {
+			ThreadSleep(5000);
+			String xpath = String.format("//td[text()='%s']",Variables.storedEventsname);
+			String formtext=webElementHelper.getElementText(webElementHelper.getElement(By.xpath(xpath)));
+			if(formtext.contains(Variables.storedEventsname)) {
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 
 		
@@ -410,10 +438,25 @@ public class WebSiteOperation extends BasePage {
 				//Date after adding the days to the current date
 				String newDate = sdf.format(cal.getTime());
 				//String append;
-				pappend = ptitle+newDate;
+				Variables.storedPollsname= pappend = ptitle+newDate;
 			    ptitle=pappend;
 			    webElementHelper.TypeInto(PollTitle, ptitle);
 				return ptitle;			
+		}
+		
+		/**store newly created poll name*/
+		
+		public boolean storedPollName() {
+			ThreadSleep(5000);
+			String xpath = String.format("//td[text()='%s']",Variables.storedPollsname);
+			String formtext=webElementHelper.getElementText(webElementHelper.getElement(By.xpath(xpath)));
+			if(formtext.contains(Variables.storedPollsname)) {
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		
 		/** identify add poll answer button */

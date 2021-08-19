@@ -3,6 +3,7 @@ package com.BlueBird.StepDefinition.WebsiteOperation;
 import org.junit.Assert;
 
 import com.BlueBird.PageObjects.WebsiteOperation.WebSiteOperation;
+import com.BlueBird.Util.Variables;
 import com.Veriday.Cucumber.TestContext;
 
 import cucumber.api.java.en.And;
@@ -300,13 +301,6 @@ public class WebSiteOperationDefinition {
 		websiteoperation.clickonBlogSave();	
 	}
 	
-//	@Then("^I should see New Event is created$")
-//	public void newEventCreated(){
-//		//Assert.assertTrue("Event is not created",websiteoperation.newEventCreated());
-//		websiteoperation.VerifyNewEventName();
-//		
-//	}
-	
 	 @And("^I click on My Profile option$")
 	 public void i_click_on_my_profile_option() throws Throwable {
 	        websiteoperation.clickonMyProfileOption();
@@ -357,5 +351,20 @@ public class WebSiteOperationDefinition {
 	    public void i_should_see_new_form_is_created() throws Throwable {
 		 Assert.assertTrue("Form name is not displayed",websiteoperation.storedFormName());
 	      
+	    }
+	 
+	 @Then("^I should see New Event is created$")
+	    public void i_should_see_new_event_is_created() throws Throwable {
+	        Assert.assertTrue("Event name is not displayed",websiteoperation.storedEventName());
+	    }
+	 
+	 @Then("^I should see New Update is created$")
+	    public void i_should_see_new_update_is_created() throws Throwable {
+		 Assert.assertTrue("Form name is not displayed",websiteoperation.storedUpdateName());
+	    }
+	 
+	 @Then("^I should see New Poll is created$")
+	    public void i_should_see_new_poll_is_created() throws Throwable {
+		 Assert.assertTrue("Form name is not displayed",websiteoperation.storedPollName());
 	    }
 }
