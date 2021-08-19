@@ -1,7 +1,7 @@
 /*
  * 
  */
-package com.BlueBird.Cucumber;
+package com.Veriday.Cucumber;
 
 import java.util.concurrent.TimeUnit;
 

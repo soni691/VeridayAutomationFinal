@@ -19,7 +19,7 @@ Scenario: Create new Update scenario
 	And I click on SaveChanges button
 	And I click on Publish Update button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -50,6 +50,8 @@ Scenario: Create new Form scenario
 	And I click on NextStep button
 	And I click on NextStep button
 	And I click on Submit For Approval button
+	
+	Then I should see New Form is created
 	
 @smoke1 @RegressionTest1
 Scenario: Create new Event scenario
@@ -109,7 +111,7 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest	
+@smoke1 @RegressionTest1	
 Scenario: Create new Team Member scenario
 	When I enter admin user name
 	And I enter admin password
@@ -127,7 +129,7 @@ Scenario: Create new Team Member scenario
 	And I enter Team Member Last Name "TeamMember"
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Add web content on website scenario
 	When I enter admin user name
 	And I enter admin password

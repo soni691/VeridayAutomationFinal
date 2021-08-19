@@ -102,9 +102,24 @@ public class WebSiteOperation extends BasePage {
 				String newDate = sdf.format(cal.getTime());
 				//String append;
 				fappend = ftitle+newDate;
-			    ftitle=fappend;
+			    Variables.storedFormname= ftitle=fappend;
 			    webElementHelper.TypeInto(FormTitle, ftitle);
 				return ftitle;			
+		}
+		
+		/**store newly created form name*/
+		
+		public boolean storedFormName() {
+			ThreadSleep(5000);
+			String xpath = String.format("//td[text()='%s']",Variables.storedFormname);
+			String formtext=webElementHelper.getElementText(webElementHelper.getElement(By.xpath(xpath)));
+			if(formtext.contains(Variables.storedFormname)) {
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		
 		/** identify form description textbox */

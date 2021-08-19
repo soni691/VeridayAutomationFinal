@@ -52,4 +52,6 @@ public class Variables {
 	
 	public static String teammemberlastname;
 	
+	public static String storedFormname;
+	
 }
