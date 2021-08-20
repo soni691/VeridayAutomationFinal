@@ -799,4 +799,48 @@ public class WebSiteOperation extends BasePage {
 		public void clickonDisplayallupdate() throws InterruptedException {	
 				webElementHelper.click(DisplayAllUpdates);		
 		}
+		
+		/** click on Setting option */
+		@FindBy(xpath = "//a[normalize-space()='Settings']")
+		private WebElement SettingsOption;
+		public void clickonSettings() throws InterruptedException {	
+				webElementHelper.click(SettingsOption);		
+		}
+		
+		/** click on Add new page button */
+		@FindBy(xpath = "//a[contains(text(),'Add Page')]")
+		private WebElement CreatePage;
+		public void clickonCreatePage() throws InterruptedException {	
+				webElementHelper.click(CreatePage);		
+		}
+		
+		/** click & enter page navigation label name */
+		@FindBy(xpath = "//input[@id='page-name']")
+		private WebElement PageNavLabel;
+		public void setPagenavlabel(String pnavoption) throws InterruptedException {	
+				webElementHelper.TypeInto(PageNavLabel, pnavoption);
+		}
+		
+		/** click & enter new page title */
+		@FindBy(xpath = "//input[@id='page-title']")
+		private WebElement PageTitle;
+		public void setPageTitle(String pgtitle) throws InterruptedException {			
+				webElementHelper.TypeInto(PageTitle, pgtitle);
+		}
+		
+		/** click & enter new page url */
+		@FindBy(xpath = "//input[@id='page-url']")
+		private WebElement PageUrl;
+		public void setPageURL(String purl) throws InterruptedException {	
+				webElementHelper.click(PageUrl);		
+				webElementHelper.TypeInto(PageUrl, purl);
+		}
+		
+		/** click on Save this page button */
+		@FindBy(xpath = "//button[contains(text(),'Save this page')]")
+		private WebElement SavePage;
+		public void clickonSavePage() throws InterruptedException {	
+				webElementHelper.scrollToElement(SavePage);
+				webElementHelper.click(SavePage);		
+		}
 }

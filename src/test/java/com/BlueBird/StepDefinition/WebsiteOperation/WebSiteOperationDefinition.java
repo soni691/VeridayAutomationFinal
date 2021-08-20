@@ -377,4 +377,31 @@ public class WebSiteOperationDefinition {
 	    public void i_select_display_all_updates_option() throws Throwable {
 	        websiteoperation.clickonDisplayallupdate();
 	    }
+	 
+
+	    @And("^I click on Add Page button$")
+	    public void i_click_on_add_page_button() throws Throwable {
+	        websiteoperation.clickonCreatePage();
+	    }
+
+	    @And("^I enter navigation label \"([^\"]*)\"$")
+	    public void i_enter_navigation_label_something(String strArg1) throws Throwable {
+	       websiteoperation.setPagenavlabel(strArg1);
+	    }
+
+	    @And("^I enter Page Title \"([^\"]*)\"$")
+	    public void i_enter_page_title_something(String strArg1) throws Throwable {
+	        websiteoperation.setPageTitle(strArg1);
+	    }
+
+	    @And("^I enter Page URL \"([^\"]*)\"$")
+	    public void i_enter_page_url_something(String strArg1) throws Throwable {
+	        websiteoperation.setPageURL(strArg1);
+	    }
+
+	    @And("^I click on SavethisPage button$")
+	    public void i_click_on_savethispage_button() throws Throwable {
+	       websiteoperation.clickonSavePage();
+	    }
+
 }

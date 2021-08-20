@@ -3,7 +3,7 @@ Feature: WebSiteOperation.feature - To prepare test cases to add web contents in
 Background: 
 	Given the web application is open
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Update scenario
 	When I enter admin user name
 	And I enter admin password
@@ -21,7 +21,7 @@ Scenario: Create new Update scenario
 	
 	Then I should see New Update is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -55,7 +55,7 @@ Scenario: Create new Form scenario
 	
 	Then I should see New Form is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Event scenario
 	When I enter admin user name
 	And I enter admin password
@@ -75,7 +75,7 @@ Scenario: Create new Event scenario
 	
 	Then I should see New Event is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Poll scenario
 	When I enter admin user name
 	And I enter admin password
@@ -97,7 +97,7 @@ Scenario: Create new Poll scenario
 	
 	Then I should see New Poll is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Blog scenario
 	When I enter admin user name
 	And I enter admin password
@@ -115,7 +115,7 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Team Member scenario
 	When I enter admin user name
 	And I enter admin password
@@ -134,6 +134,23 @@ Scenario: Create new Team Member scenario
 	And I click on Submit For Approval button
 	
 @smoke @RegressionTest
+Scenario: Create new web page on website scenario
+	When I enter admin user name
+	And I enter admin password
+	And I click on login button
+	And I click on User Manager option
+	And I click on Search user textbox
+	And I enter User Name
+	And I click on Search User button
+	And I click on GoUser button
+	And I click on Settings option
+	And I click on Add Page button
+	And I enter navigation label "AutomationPage"
+	And I enter Page Title "AutomationPageTitle"
+	And I enter Page URL "AutomationPageURL"
+	And I click on SavethisPage button
+	
+@smoke1 @RegressionTest1
 Scenario: Add web content on website scenario
 	When I enter admin user name
 	And I enter admin password
