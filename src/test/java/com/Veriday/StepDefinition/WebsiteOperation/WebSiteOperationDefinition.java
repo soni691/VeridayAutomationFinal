@@ -1,4 +1,4 @@
-package com.BlueBird.StepDefinition.WebsiteOperation;
+package com.Veriday.StepDefinition.WebsiteOperation;
 
 import org.junit.Assert;
 
