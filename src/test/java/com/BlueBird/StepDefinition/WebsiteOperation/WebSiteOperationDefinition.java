@@ -367,4 +367,14 @@ public class WebSiteOperationDefinition {
 	    public void i_should_see_new_poll_is_created() throws Throwable {
 		 Assert.assertTrue("Form name is not displayed",websiteoperation.storedPollName());
 	    }
+	 
+	 @And("^I enter Update Title on website \"([^\"]*)\"$")
+	    public void i_enter_update_title_on_website_something(String strArg1) throws Throwable {
+	       websiteoperation.setWebsiteUpdateTitle(strArg1);
+	    }
+	 
+	 @And("^I select Display All Updates option$")
+	    public void i_select_display_all_updates_option() throws Throwable {
+	        websiteoperation.clickonDisplayallupdate();
+	    }
 }

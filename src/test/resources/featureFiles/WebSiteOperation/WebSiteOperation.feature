@@ -97,7 +97,7 @@ Scenario: Create new Poll scenario
 	
 	Then I should see New Poll is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Blog scenario
 	When I enter admin user name
 	And I enter admin password
@@ -156,6 +156,8 @@ Scenario: Add web content on website scenario
 	And I click on Web Gadgets option
 	And I click on Updates option
 	And I click on WebGadget Add button
+	And I enter Update Title on website "AutomationWebsiteUpdateTitle"
+	And I select Display All Updates option
 	And I click on Update Save button
 	And I click on Browse button
 	And I click on Web Gadgets option

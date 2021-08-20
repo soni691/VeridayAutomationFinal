@@ -70,7 +70,7 @@ public class WebSiteOperation extends BasePage {
 		/**store newly created update name*/
 		
 		public boolean storedUpdateName() {
-			ThreadSleep(5000);
+			ThreadSleep(3000);
 			String xpath = String.format("//td[text()='%s']",Variables.storedUpdatename);
 			String formtext=webElementHelper.getElementText(webElementHelper.getElement(By.xpath(xpath)));
 			if(formtext.contains(Variables.storedUpdatename)) {
@@ -124,7 +124,7 @@ public class WebSiteOperation extends BasePage {
 		
 		/**store newly created form name*/		
 		public boolean storedFormName() {
-			ThreadSleep(5000);
+			ThreadSleep(3000);
 			String xpath = String.format("//td[text()='%s']",Variables.storedFormname);
 			String formtext=webElementHelper.getElementText(webElementHelper.getElement(By.xpath(xpath)));
 			if(formtext.contains(Variables.storedFormname)) {
@@ -307,7 +307,7 @@ public class WebSiteOperation extends BasePage {
 		/**store newly created event name*/
 		
 		public boolean storedEventName() {
-			ThreadSleep(5000);
+			ThreadSleep(3000);
 			String xpath = String.format("//td[text()='%s']",Variables.storedEventsname);
 			String formtext=webElementHelper.getElementText(webElementHelper.getElement(By.xpath(xpath)));
 			if(formtext.contains(Variables.storedEventsname)) {
@@ -447,7 +447,7 @@ public class WebSiteOperation extends BasePage {
 		/**store newly created poll name*/
 		
 		public boolean storedPollName() {
-			ThreadSleep(5000);
+			ThreadSleep(3000);
 			String xpath = String.format("//td[text()='%s']",Variables.storedPollsname);
 			String formtext=webElementHelper.getElementText(webElementHelper.getElement(By.xpath(xpath)));
 			if(formtext.contains(Variables.storedPollsname)) {
@@ -534,8 +534,9 @@ public class WebSiteOperation extends BasePage {
 		private WebElement RGMPWebcontentSave;	
 		
 		public void clickonMemberSave() {
-			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			//webElementHelper.scrollToElement(RGMPWebcontentSave);
 			webElementHelper.click(RGMPWebcontentSave);
+			ThreadSleep(5000);
 		}
 		
 		/** identify canada life webcontent save button */
@@ -549,16 +550,19 @@ public class WebSiteOperation extends BasePage {
 		}	else if(currentURL.contains("rgmp.qa")) {
 			webElementHelper.scrollToElement(RGMPWebcontentSave);
 			webElementHelper.click(RGMPWebcontentSave);
+			ThreadSleep(2000);
 		}
 		}
 		
 		public void clickonPollSave() {
 			webElementHelper.click(SaveWebContent);
+			ThreadSleep(2000);
 		}
 		
 		public void clickonUpdateSave() {
-			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			//webElementHelper.scrollToElement(RGMPWebcontentSave);
 			webElementHelper.click(RGMPWebcontentSave);
+			ThreadSleep(14000);
 		}
 		
 		/** identify add events on website option */
@@ -580,7 +584,7 @@ public class WebSiteOperation extends BasePage {
 		private WebElement AddWebGadget;
 		public void clickonAddWebGagdet() {
 			webElementHelper.click(AddWebGadget);
-			ThreadSleep(8000);
+			ThreadSleep(12000);
 		}
 		
 		/** click on website browse button */
@@ -679,8 +683,9 @@ public class WebSiteOperation extends BasePage {
 		
 		/**click on blog save button*/
 		public void clickonBlogSave() {
-			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			//webElementHelper.scrollToElement(RGMPWebcontentSave);
 			webElementHelper.click(RGMPWebcontentSave);
+			ThreadSleep(2000);
 		}
 		
 		/** identify event saved confirmation message */
@@ -779,5 +784,19 @@ public class WebSiteOperation extends BasePage {
 		public void clickonCreatedTeamMember() {
 			waithelper.WaitForElementToBeClickable(Member1);
 			webElementHelper.click(Member1);
+		}
+		
+		@FindBy(xpath = "//*[@class='configure-update__title']/input")
+		private WebElement WebsiteUpdateTitle;
+		/**Enter update title on website*/
+		public void setWebsiteUpdateTitle(String wutitle) {
+			webElementHelper.TypeInto(WebsiteUpdateTitle, wutitle);
+		}
+		
+		/** click on display all updates option */
+		@FindBy(xpath = "//*[@class='configure-update__display']/label[1]")
+		private WebElement DisplayAllUpdates;
+		public void clickonDisplayallupdate() throws InterruptedException {	
+				webElementHelper.click(DisplayAllUpdates);		
 		}
 }
