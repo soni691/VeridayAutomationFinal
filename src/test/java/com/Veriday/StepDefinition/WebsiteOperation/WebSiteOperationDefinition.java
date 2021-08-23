@@ -2,9 +2,9 @@ package com.Veriday.StepDefinition.WebsiteOperation;
 
 import org.junit.Assert;
 
-import com.BlueBird.PageObjects.WebsiteOperation.WebSiteOperation;
-import com.BlueBird.Util.Variables;
 import com.Veriday.Cucumber.TestContext;
+import com.Veriday.PageObjects.WebsiteOperation.WebSiteOperation;
+import com.Veriday.Util.Variables;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;

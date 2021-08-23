@@ -7,22 +7,21 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 
-import com.BlueBird.Factory.DriverFactory;
-import com.BlueBird.Helper.WaitHelper;
-import com.BlueBird.Helper.WebElementHelper;
-import com.BlueBird.PageObject.adminHQ.AdminHQ;
-import com.BlueBird.PageObjects.CalendarPage;
-import com.BlueBird.PageObjects.CommonPage;
-import com.BlueBird.PageObjects.HomePage;
-import com.BlueBird.PageObjects.DigitalWorkSpace.DigitalWorkSpace;
-import com.BlueBird.PageObjects.Login.LoginPage;
-import com.BlueBird.PageObjects.OrganizationGroups.OrganizationalGroups;
-
-import com.BlueBird.PageObjects.UserManager.UserManager;
-import com.BlueBird.PageObjects.UserOperation.UserOperation;
-import com.BlueBird.PageObjects.WebsiteOperation.WebSiteOperation;
-import com.BlueBird.Util.Constants;
-import com.BlueBird.Util.DriverDetail;
+import com.Veriday.Factory.DriverFactory;
+import com.Veriday.Helper.WaitHelper;
+import com.Veriday.Helper.WebElementHelper;
+import com.Veriday.PageObject.adminHQ.AdminHQ;
+import com.Veriday.PageObjects.CalendarPage;
+import com.Veriday.PageObjects.CommonPage;
+import com.Veriday.PageObjects.HomePage;
+import com.Veriday.PageObjects.DigitalWorkSpace.DigitalWorkSpace;
+import com.Veriday.PageObjects.Login.LoginPage;
+import com.Veriday.PageObjects.OrganizationGroups.OrganizationalGroups;
+import com.Veriday.PageObjects.UserManager.UserManager;
+import com.Veriday.PageObjects.UserOperation.UserOperation;
+import com.Veriday.PageObjects.WebsiteOperation.WebSiteOperation;
+import com.Veriday.Util.Constants;
+import com.Veriday.Util.DriverDetail;
 
 /**
  * The Class TestContext.

@@ -3,7 +3,7 @@ Feature: WebSiteOperation.feature - To prepare test cases to add web contents in
 Background: 
 	Given the web application is open
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Update scenario
 	When I enter admin user name
 	And I enter admin password
@@ -21,7 +21,7 @@ Scenario: Create new Update scenario
 	
 	Then I should see New Update is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -55,7 +55,7 @@ Scenario: Create new Form scenario
 	
 	Then I should see New Form is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Event scenario
 	When I enter admin user name
 	And I enter admin password
@@ -75,7 +75,7 @@ Scenario: Create new Event scenario
 	
 	Then I should see New Event is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Poll scenario
 	When I enter admin user name
 	And I enter admin password
