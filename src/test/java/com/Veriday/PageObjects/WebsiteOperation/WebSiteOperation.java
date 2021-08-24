@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.Veriday.Helper.WaitHelper;
 import com.Veriday.Helper.WebElementHelper;
 import com.Veriday.PageObjects.BasePage;
+import com.Veriday.PageObjects.UserManager.UserManager;
 import com.Veriday.PageObjects.UserOperation.UserOperation;
 import com.Veriday.Util.Variables;
 
@@ -20,10 +21,12 @@ import junit.framework.Assert;
 public class WebSiteOperation extends BasePage {
 	private WaitHelper waithelper;
 	private UserOperation useropr;
+	private UserManager usrmgr;
 
 	public WebSiteOperation(WebDriver driver, WebElementHelper webElementHelper) {
 		super(driver, webElementHelper);
 		waithelper= new WaitHelper(driver);
+		usrmgr= new UserManager(driver, webElementHelper);
 		PageFactory.initElements(driver, this);}
 		
 		String currenturl=driver.getCurrentUrl();
@@ -670,9 +673,17 @@ public class WebSiteOperation extends BasePage {
 		/** identify estate planning category */
 		@FindBy(xpath = "//label[normalize-space()='Estate planning']")
 		private WebElement EstatePlaningCat;
-		public void clickonEstatePLaningCat() throws InterruptedException {	
-				webElementHelper.click(EstatePlaningCat);		
+		/** identify estate planning category for candalife */
+		@FindBy(xpath = "//label[contains(text(),'Family and finance')]")
+		private WebElement FamilyFinCat;
+	    public void clickonCategory() {
+		if(currenturl.contains("rgmp.qa")) {
+			webElementHelper.click(EstatePlaningCat);
 		}
+		else if (currenturl.contains("clic.qa")) {
+			webElementHelper.click(FamilyFinCat);
+		}
+	}
 		
 		/** click on web gadget Latest blog post option */
 		@FindBy(xpath = "//a[normalize-space()='Latest Blog Posts']")
@@ -842,5 +853,37 @@ public class WebSiteOperation extends BasePage {
 		public void clickonSavePage() throws InterruptedException {	
 				webElementHelper.scrollToElement(SavePage);
 				webElementHelper.click(SavePage);		
+		}
+		
+//		/** identify member job title1 textbox */
+//		@FindBy(xpath = "//input[@id='user-title-filter']")
+//		private WebElement MemberTitle1;
+//		/** identify member job title2 textboxy */
+//		@FindBy(xpath = "//input[@id='user-title-filter1']")
+//		private WebElement MemberTitle2;
+//		public void enterMemberJobTitle() {
+//			webElementHelper.TypeInto(MemberTitle1, generateData.generateRandomString(5));
+//		}
+//		public void enterMemberJobTitle1() {
+//			webElementHelper.TypeInto(MemberTitle2, generateData.generateRandomString(5));
+//		}
+		
+		/**set member job titles*/
+		public void setMemberTitle() {
+			if(currenturl.contains("clic.qa")) {
+				usrmgr.enterJobTitle1();
+				usrmgr.enterJobTitle2();
+			}
+			else if (currenturl.contains("rgmp.qa")) {
+				usrmgr.enterJobTitle1();
+			}
+		}
+		
+		
+		/**set member provincial license*/
+		@FindBy(xpath = "//button[normalize-space()='Add']")
+		private WebElement AddMemberLicense;
+		public void setMemberLicense() throws InterruptedException {		
+			usrmgr.enterPLincense();	
 		}
 }

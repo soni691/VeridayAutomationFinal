@@ -165,8 +165,7 @@ public class OrganizationalGroupsStepDefinition {
 
 	@Then("^a New Branch is created$")
 	public void a_New_Branch_is_created() throws Throwable {
-		ogroupspage.VerifyBrnchSavedPopup();
-	    System.out.println("New Branch Is created");
+	    ogroupspage.HandleLeavebutton();
 	    
 	}
 	

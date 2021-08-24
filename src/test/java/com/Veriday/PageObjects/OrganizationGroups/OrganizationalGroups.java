@@ -1,5 +1,6 @@
 package com.Veriday.PageObjects.OrganizationGroups;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.Veriday.Helper.WaitHelper;
 import com.Veriday.Helper.WebElementHelper;
 import com.Veriday.PageObjects.BasePage;
+import com.Veriday.PageObjects.DigitalWorkSpace.DigitalWorkSpace;
 import com.Veriday.Util.Variables;
 
 public class OrganizationalGroups extends BasePage {
@@ -83,9 +85,19 @@ public class OrganizationalGroups extends BasePage {
 	private WebElement BranchSavedPopup;
 	public void VerifyBrnchSavedPopup() throws InterruptedException {
 		webElementHelper.isElementDisplayed(BranchSavedPopup);
-		//waithelper.WaitForElementVisible(BranchSavedPopup);
-		//driver.navigate().refresh(); 
-		//driver.switchTo().alert().accept();
+		//Alert alert = driver.switchTo().alert();
+		//alert.accept();
+		//webDriver.switchTo().alert().accept();
+	}
+	
+	/** click on BAck to Digital WorkSpace option */
+	@FindBy(xpath = "//a[normalize-space()='Back to Digital Workspace']")
+	private WebElement dworkspace1;
+	public void HandleLeavebutton() {
+		webElementHelper.click(dworkspace1);
+		//driver.switchTo().alert();
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 	}
 	
 	/** click on New Region button */
@@ -202,7 +214,7 @@ public class OrganizationalGroups extends BasePage {
 			waithelper.WaitForElementVisible(GroupAttribute);
 			webElementHelper.click(GroupAttribute);	
 			webElementHelper.click(Regional);
-			webElementHelper.click(SaveChange);
+			//webElementHelper.click(SaveChange);
 	}
 	public void VerifyUpdatePopup() {
 		waithelper.WaitForElementVisible(GroupSavedPopup);

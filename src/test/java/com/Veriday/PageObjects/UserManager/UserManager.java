@@ -153,7 +153,7 @@ public class UserManager extends BasePage {
 		}
 		else if (currenturl.contains("clic.qa")) {
 			webElementHelper.click(Location);
-			String xpath1 = String.format("//option[contains(text()='%s')]", location2);
+			String xpath1 = String.format("//option[contains(text(),'%s')]", location2);
 			webElementHelper.click(webElementHelper.getElement(By.xpath(xpath1)));
 		}
 	}

@@ -288,7 +288,7 @@ public class WebSiteOperationDefinition {
 	
 	@And("^I select category Estate planning$")
 	public void I_select_estate_category() throws Throwable {
-		websiteoperation.clickonEstatePLaningCat();	
+		websiteoperation.clickonCategory();	
 	}
 	
 	@And("^I click on Latest Blog Posts option$")
@@ -402,6 +402,17 @@ public class WebSiteOperationDefinition {
 	    @And("^I click on SavethisPage button$")
 	    public void i_click_on_savethispage_button() throws Throwable {
 	       websiteoperation.clickonSavePage();
+	    }
+	    
+	    @And("^I enter member Job Title$")
+	    public void i_enter_member_job_title1() throws Throwable {
+	       websiteoperation.setMemberTitle();
+	    }
+
+
+	    @And("^I select Provincial Licenses$")
+	    public void i_select_provincial_licenses() throws Throwable {
+	        websiteoperation.setMemberLicense();
 	    }
 
 }
