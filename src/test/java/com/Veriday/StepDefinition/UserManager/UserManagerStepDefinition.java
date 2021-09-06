@@ -89,10 +89,10 @@ public class UserManagerStepDefinition {
 	    
 	}
 
-	@And("^I enter Location \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void i_enter_Location(String loc1,String loc2) throws Throwable {
+	@And("^I enter Location \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void i_enter_Location(String loc1,String loc2,String loc3) throws Throwable {
 		//String location = CONFIG.getProperty("demo.location");
-		usermanagerPage.enterLocation1(loc1,loc2);	    
+		usermanagerPage.enterLocation1(loc1,loc2,loc3);	    
 	}
 
 	@And("^I enter PhoneNumber$")

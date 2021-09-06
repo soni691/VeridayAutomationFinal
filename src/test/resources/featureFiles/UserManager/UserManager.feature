@@ -12,7 +12,7 @@ Scenario: Create new Primary User scenario
 	And I enter JobTitle1
 	And I enter JobTitle2
 	And I enter StateRegistration
-	And I enter Location "Burlington" and "Manitoba Financial Centre - Rosser"
+	And I enter Location "Burlington" and "Manitoba Financial Centre - Rosser" and "Amherst"
 	And I enter PhoneNumber
 	And I click on Save&Activate button
 	
@@ -29,7 +29,7 @@ Scenario: Create new Team User scenario
 	And I enter JobTitle1
 	And I enter JobTitle2
 	And I enter StateRegistration
-	And I enter Location "Burlington" and "Manitoba Financial Center - Rosser"
+	And I enter Location "Burlington" and "Manitoba Financial Center - Rosser" and "Amherst"
 	And I enter PhoneNumber
 	And I enter Team Name "AutomationTeam"
 	And I click on Save&Activate button

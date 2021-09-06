@@ -144,7 +144,7 @@ public class UserManager extends BasePage {
 	private WebElement LocationRGMP;
 	
 	//select location from location dropdown list//
-	public void enterLocation1(String location1, String location2) {
+	public void enterLocation1(String location1, String location2, String location3) {
 		if(currenturl.contains("rgmp.qa")) {
 			webElementHelper.click(Location);
 			String xpath = String.format("//option[contains(text(),'%s')]", location1);
@@ -156,6 +156,12 @@ public class UserManager extends BasePage {
 			String xpath1 = String.format("//option[contains(text(),'%s')]", location2);
 			webElementHelper.click(webElementHelper.getElement(By.xpath(xpath1)));
 		}
+		else if (currenturl.contains("cibc.qa")) {
+			webElementHelper.click(Location);
+			String xpath2 = String.format("//option[contains(text(),'%s')]", location3);
+			webElementHelper.click(webElementHelper.getElement(By.xpath(xpath2)));
+		}
+		
 	}
 	
 	//read location from config file
