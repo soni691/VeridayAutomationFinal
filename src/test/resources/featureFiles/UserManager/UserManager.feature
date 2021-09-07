@@ -18,7 +18,7 @@ Scenario: Create new Primary User scenario
 	
 	Then A new Primary User is created
 
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Team User scenario
 	When I click on User Manager option
 	And I click on Create Single User button
@@ -36,7 +36,7 @@ Scenario: Create new Team User scenario
 	
 	Then A new Team User is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Reviewer User scenario
 	When I click on User Manager option
 	And I click on Create Single User button
@@ -50,7 +50,7 @@ Scenario: Create new Reviewer User scenario
 	
 	Then A new Reviewer User is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Marketing User scenario
 	When I click on User Manager option
 	And I click on Create Single User button

@@ -887,6 +887,9 @@ public class WebSiteOperation extends BasePage {
 			else if (currenturl.contains("rgmp.qa")) {
 				usrmgr.enterJobTitle1();
 			}
+			else if (currenturl.contains("cibc.qa")) {
+				usrmgr.enterJobTitle1();
+			}
 		}
 		
 		
