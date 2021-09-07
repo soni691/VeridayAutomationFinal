@@ -21,7 +21,7 @@ Scenario: Create new Update scenario
 	
 	Then I should see New Update is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -55,7 +55,7 @@ Scenario: Create new Form scenario
 	
 	Then I should see New Form is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Event scenario
 	When I enter admin user name
 	And I enter admin password
@@ -75,7 +75,7 @@ Scenario: Create new Event scenario
 	
 	Then I should see New Event is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Poll scenario
 	When I enter admin user name
 	And I enter admin password
@@ -115,7 +115,7 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Team Member scenario
 	When I enter admin user name
 	And I enter admin password

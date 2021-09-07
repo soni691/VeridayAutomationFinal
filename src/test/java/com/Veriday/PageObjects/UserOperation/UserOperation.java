@@ -31,7 +31,7 @@ public class UserOperation extends BasePage{
 	}
 
 	public void setSearchUser() throws InterruptedException {	
-			webElementHelper.TypeInto(SearchUserBox, Variables.pUserName);
+			webElementHelper.TypeInto(SearchUserBox, Variables.prmusername);
 	}
 	
 

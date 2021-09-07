@@ -50,11 +50,17 @@ public class UserManagerStepDefinition {
 	}
 
 
+	@And("^I enter Primary Account Email$")
+	public void i_enter_primary_Account_Email() throws Throwable {
+	   usermanagerPage.enterPrimaryuserAccountEmail();
+	    
+	}
 	@And("^I enter Account Email$")
 	public void i_enter_Account_Email() throws Throwable {
 	   usermanagerPage.enterAccountEmail();
 	    
 	}
+	
 	@And("^I enter First Name \"([^\"]*)\"$")
 	public void I_enter_First_Name(String fname) throws Throwable {
 		usermanagerPage.setFName(fname);

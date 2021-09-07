@@ -89,7 +89,12 @@ public class WebSiteOperation extends BasePage {
 		@FindBy(xpath = "//img[@alt='Forms']")
 		private WebElement Form;
 		public void clickonFormOption() throws InterruptedException {	
-				webElementHelper.click(Form);		
+			if(currenturl.contains("rgmp.qa")) {
+				webElementHelper.click(Form);
+			}
+			else if(currenturl.contains("clic.qa")) {
+				webElementHelper.click(Form);
+			}
 		}
 		
 		/** identify create new form button */
@@ -413,7 +418,12 @@ public class WebSiteOperation extends BasePage {
 		@FindBy(xpath = "//img[@alt='Polls']")
 		private WebElement PollOption;
 		public void clickonPollOption() throws InterruptedException {	
+			if(currenturl.contains("rgmp.qa")) {
 				webElementHelper.click(PollOption);		
+			}
+			else if(currenturl.contains("clic.qa")) {
+				webElementHelper.click(PollOption);
+			}
 		}
 		
 		/** identify create new poll button */

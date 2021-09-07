@@ -54,6 +54,11 @@ public class UserManager extends BasePage {
 		Variables.pUserName =generateData.generateEmail(14);	
 		webElementHelper.TypeInto(AccountEmail,Variables.pUserName);
 	}
+	public void enterPrimaryuserAccountEmail() {
+		Variables.prmusername =generateData.generateEmail(14);	
+		webElementHelper.TypeInto(AccountEmail,Variables.prmusername);
+	}
+	
 	/** the input first name */
 	@FindBy(xpath = "//input[@id='firstNameField']")
 	private WebElement Firstname;

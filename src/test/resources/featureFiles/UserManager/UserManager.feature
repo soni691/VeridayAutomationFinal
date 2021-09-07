@@ -6,7 +6,7 @@ Background:
 Scenario: Create new Primary User scenario
 	When I click on User Manager option
 	And I click on Create Single User button
-	And I enter Account Email
+	And I enter Primary Account Email
 	And I enter First Name "Automation"
 	And I enter Last Name "PrimaryUser"
 	And I enter JobTitle1
@@ -18,7 +18,7 @@ Scenario: Create new Primary User scenario
 	
 	Then A new Primary User is created
 
-
+@smoke @RegressionTest
 Scenario: Create new Team User scenario
 	When I click on User Manager option
 	And I click on Create Single User button
@@ -36,7 +36,7 @@ Scenario: Create new Team User scenario
 	
 	Then A new Team User is created
 	
-
+@smoke @RegressionTest
 Scenario: Create new Reviewer User scenario
 	When I click on User Manager option
 	And I click on Create Single User button
@@ -50,7 +50,7 @@ Scenario: Create new Reviewer User scenario
 	
 	Then A new Reviewer User is created
 	
-
+@smoke @RegressionTest
 Scenario: Create new Marketing User scenario
 	When I click on User Manager option
 	And I click on Create Single User button
