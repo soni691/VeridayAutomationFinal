@@ -34,6 +34,7 @@ public class OrganizationalGroups extends BasePage {
 	@FindBy(xpath = "//button[contains(text(),'+ New')]")
 	private WebElement New;
 	public void clickonNew() throws InterruptedException {	
+			ThreadSleep(2000);
 			webElementHelper.click(New);		
 	}
 	
@@ -96,6 +97,11 @@ public class OrganizationalGroups extends BasePage {
 	public void HandleLeavebutton() {
 		webElementHelper.click(dworkspace1);
 		//driver.switchTo().alert();
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+	}
+	
+	public void HandleLeavebutton2() {
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 	}
@@ -201,7 +207,8 @@ public class OrganizationalGroups extends BasePage {
 	@FindBy(xpath = "//button[contains(text(),'Edit')]")
 	private WebElement Edit;
 	public void clickonEdit() throws InterruptedException {
-		waithelper.WaitForElementVisible(Edit);
+		//waithelper.WaitForElementVisible(Edit);
+		ThreadSleep(2000);
 			webElementHelper.click(Edit);		
 	}
 	
@@ -238,17 +245,19 @@ public class OrganizationalGroups extends BasePage {
 		
 	}
 	public void SelectedBranchName() {
-		String xpath=String.format("//a[text()='%s']", Variables.groupName);
-		webElementHelper.click(webElementHelper.getElement(By.xpath(xpath)));
-		System.out.println(xpath);
-		String xpath1=String.format("//a[text()='%s']", Variables.regionName);
-		System.out.println(xpath1);
-		webElementHelper.scrollToElement(webElementHelper.getElement(By.xpath(xpath1)));
-		webElementHelper.click(webElementHelper.getElement(By.xpath(xpath1)));
+//		String xpath=String.format("//a[text()='%s']", Variables.groupName);
+//		webElementHelper.click(webElementHelper.getElement(By.xpath(xpath)));
+//		System.out.println(xpath);
+//		String xpath1=String.format("//a[text()='%s']", Variables.regionName);
+//		System.out.println(xpath1);
+//		webElementHelper.scrollToElement(webElementHelper.getElement(By.xpath(xpath1)));
+//		webElementHelper.click(webElementHelper.getElement(By.xpath(xpath1)));
 		String xpath2=String.format("//a[text()='%s']", Variables.branchName);
 		System.out.println(xpath2);
-		webElementHelper.scrollToElement(webElementHelper.getElement(By.xpath(xpath2)));
+		//webElementHelper.scrollToElement(webElementHelper.getElement(By.xpath(xpath2)));
 		webElementHelper.click(webElementHelper.getElement(By.xpath(xpath2)));
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 	}
 
 }

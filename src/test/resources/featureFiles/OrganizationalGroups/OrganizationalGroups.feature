@@ -77,7 +77,7 @@ Scenario: Update newly created Group Region & Branch scenario
 	And I enter Branch Country
 	And I click on SaveChanges button
 	
-#	Then a branch is updated
+	Then a branch is updated
 	
 #Scenario: Create new Region scenario
 #	And I click on Organizational Groups option
