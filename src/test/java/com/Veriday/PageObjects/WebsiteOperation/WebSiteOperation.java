@@ -95,6 +95,9 @@ public class WebSiteOperation extends BasePage {
 			else if(currenturl.contains("clic.qa")) {
 				webElementHelper.click(Form);
 			}
+			else if(currenturl.contains("rbc.qa")) {
+				webElementHelper.click(Form);
+			}
 		}
 		
 		/** identify create new form button */
@@ -180,7 +183,7 @@ public class WebSiteOperation extends BasePage {
 		//@FindBy(xpath = "//input[@id="+ aemail +"])
 		//private WebElement EmailFormResponse;
 		public void clickonEmailFormResponse() throws InterruptedException {
-				String xpath = String.format("//input[@id='%s']", Variables.pUserName);
+				String xpath = String.format("//input[@id='%s']", Variables.prmusername);
 				webElementHelper.click(webElementHelper.getElement(By.xpath(xpath)));		
 		}
 		
@@ -422,6 +425,9 @@ public class WebSiteOperation extends BasePage {
 				webElementHelper.click(PollOption);		
 			}
 			else if(currenturl.contains("clic.qa")) {
+				webElementHelper.click(PollOption);
+			}
+			else if(currenturl.contains("rbc.qa")) {
 				webElementHelper.click(PollOption);
 			}
 		}
@@ -888,6 +894,9 @@ public class WebSiteOperation extends BasePage {
 				usrmgr.enterJobTitle1();
 			}
 			else if (currenturl.contains("cibc.qa")) {
+				usrmgr.enterJobTitle1();
+			}
+			else if (currenturl.contains("rbc.qa")) {
 				usrmgr.enterJobTitle1();
 			}
 		}
