@@ -813,18 +813,28 @@ public class WebSiteOperation extends BasePage {
 			webElementHelper.click(Member1);
 		}
 		
+		
 		@FindBy(xpath = "//*[@class='configure-update__title']/input")
 		private WebElement WebsiteUpdateTitle;
+		//identify update title textbox for rbc tenant
+		@FindBy(xpath = "//div[@class='controls']/input[1]")
+		private WebElement WebsiteUpdateTitleRBC;
 		/**Enter update title on website*/
 		public void setWebsiteUpdateTitle(String wutitle) {
+			if(currenturl.contains("rgmp.qa")) {
 			webElementHelper.TypeInto(WebsiteUpdateTitle, wutitle);
+			}
+			else if(currenturl.contains("rbc.qa")) {
+				webElementHelper.scrollToElement(WebsiteUpdateTitleRBC);
+				webElementHelper.TypeInto(WebsiteUpdateTitleRBC, wutitle);
+			}
 		}
 		
 		/** click on display all updates option */
-		@FindBy(xpath = "//*[@class='configure-update__display']/label[1]")
+		@FindBy(xpath = "//label[contains(text(),'Display All Updates')]")
 		private WebElement DisplayAllUpdates;
-		public void clickonDisplayallupdate() throws InterruptedException {	
-				webElementHelper.click(DisplayAllUpdates);		
+		public void clickonDisplayallupdate() throws InterruptedException {				
+				webElementHelper.click(DisplayAllUpdates);				
 		}
 		
 		/** click on Setting option */

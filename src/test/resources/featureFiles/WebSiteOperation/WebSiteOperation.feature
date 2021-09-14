@@ -21,7 +21,7 @@ Scenario: Create new Update scenario
 	
 	Then I should see New Update is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Form scenario
 	When I enter admin user name
 	And I enter admin password
@@ -55,7 +55,7 @@ Scenario: Create new Form scenario
 	
 	Then I should see New Form is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Event scenario
 	When I enter admin user name
 	And I enter admin password
@@ -75,7 +75,7 @@ Scenario: Create new Event scenario
 	
 	Then I should see New Event is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Poll scenario
 	When I enter admin user name
 	And I enter admin password
@@ -97,7 +97,7 @@ Scenario: Create new Poll scenario
 	
 	Then I should see New Poll is created
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Blog scenario
 	When I enter admin user name
 	And I enter admin password
@@ -115,7 +115,7 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new Team Member scenario
 	When I enter admin user name
 	And I enter admin password
@@ -135,7 +135,7 @@ Scenario: Create new Team Member scenario
 	And I select Provincial Licenses
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new web page on website scenario
 	When I enter admin user name
 	And I enter admin password
@@ -152,7 +152,7 @@ Scenario: Create new web page on website scenario
 	And I enter Page URL "AutomationPageURL"
 	And I click on SavethisPage button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Add web content on website scenario
 	When I enter admin user name
 	And I enter admin password
@@ -163,14 +163,6 @@ Scenario: Add web content on website scenario
 	And I click on Search User button
 	And I click on GoUser button
 	And I click on MyWebsite option
-	And I click on Add WebContent button
-	And I click on Add Forms option
-	And I click on Webcontent Save button
-	And I click on Add WebContent button
-	And I click on Add Events option
-	And I click on Add WebContent button
-	And I click on Polls option
-	And I click on Poll Save button
 	And I click on Browse button
 	And I click on Web Gadgets option
 	And I click on Updates option
@@ -178,12 +170,20 @@ Scenario: Add web content on website scenario
 	And I enter Update Title on website "AutomationWebsiteUpdateTitle"
 	And I select Display All Updates option
 	And I click on Update Save button
-	And I click on Browse button
-	And I click on Web Gadgets option
-	And I click on Latest Blog Posts option
-	And I click on WebGadget Add button
-	And I click on Blog Save button
-	And I click on Add WebContent button
-	And I click on Team Member Profile
-	And I select Team Member from user dropdown list
-	And I click on Team Member Save button
+#	And I click on Add WebContent button
+#	And I click on Add Forms option
+#	And I click on Webcontent Save button
+#	And I click on Add WebContent button
+#	And I click on Add Events option
+#	And I click on Add WebContent button
+#	And I click on Polls option
+#	And I click on Poll Save button
+#	And I click on Browse button
+#	And I click on Web Gadgets option
+#	And I click on Latest Blog Posts option
+#	And I click on WebGadget Add button
+#	And I click on Blog Save button
+#	And I click on Add WebContent button
+#	And I click on Team Member Profile
+#	And I select Team Member from user dropdown list
+#	And I click on Team Member Save button
