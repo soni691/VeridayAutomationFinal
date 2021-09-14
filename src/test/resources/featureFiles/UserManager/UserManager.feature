@@ -12,13 +12,13 @@ Scenario: Create new Primary User scenario
 	And I enter JobTitle1
 	And I enter JobTitle2
 	And I enter StateRegistration
-	And I enter Location "Burlington" and "Manitoba Financial Centre - Rosser" and "Amherst"
+	And I enter Location "Burlington" and "Manitoba Financial Centre - Rosser" and "Amherst" and "Nanaimo Main Branch"
 	And I enter PhoneNumber
 	And I click on Save&Activate button
 	
 	Then A new Primary User is created
 
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Team User scenario
 	When I click on User Manager option
 	And I click on Create Single User button
@@ -29,14 +29,14 @@ Scenario: Create new Team User scenario
 	And I enter JobTitle1
 	And I enter JobTitle2
 	And I enter StateRegistration
-	And I enter Location "Burlington" and "Manitoba Financial Center - Rosser" and "Amherst"
+	And I enter Location "Burlington" and "Manitoba Financial Center - Rosser" and "Amherst" and "Nanaimo Main Branch"
 	And I enter PhoneNumber
 	And I enter Team Name "AutomationTeam"
 	And I click on Save&Activate button
 	
 	Then A new Team User is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Reviewer User scenario
 	When I click on User Manager option
 	And I click on Create Single User button
@@ -50,7 +50,7 @@ Scenario: Create new Reviewer User scenario
 	
 	Then A new Reviewer User is created
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Marketing User scenario
 	When I click on User Manager option
 	And I click on Create Single User button

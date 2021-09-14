@@ -149,7 +149,7 @@ public class UserManager extends BasePage {
 	private WebElement LocationRGMP;
 	
 	//select location from location dropdown list//
-	public void enterLocation1(String location1, String location2, String location3) {
+	public void enterLocation1(String location1, String location2, String location3,String location4) {
 		if(currenturl.contains("rgmp.qa")) {
 			webElementHelper.click(Location);
 			String xpath = String.format("//option[contains(text(),'%s')]", location1);
@@ -165,6 +165,11 @@ public class UserManager extends BasePage {
 			webElementHelper.click(Location);
 			String xpath2 = String.format("//option[contains(text(),'%s')]", location3);
 			webElementHelper.click(webElementHelper.getElement(By.xpath(xpath2)));
+		}
+		else if (currenturl.contains("rbc.qa")) {
+			webElementHelper.click(Location);
+			String xpath3 = String.format("//option[contains(text(),'%s')]", location4);
+			webElementHelper.click(webElementHelper.getElement(By.xpath(xpath3)));
 		}
 		
 	}
