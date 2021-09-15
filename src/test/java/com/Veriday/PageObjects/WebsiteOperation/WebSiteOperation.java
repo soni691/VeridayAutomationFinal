@@ -571,6 +571,16 @@ public class WebSiteOperation extends BasePage {
 			webElementHelper.click(RGMPWebcontentSave);
 			ThreadSleep(2000);
 		}
+		else if(currentURL.contains("rbc.qa")) {
+			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			webElementHelper.click(SaveWebContent);
+			ThreadSleep(2000);
+		}
+		else if(currentURL.contains("cibc.qa")) {
+			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			webElementHelper.click(SaveWebContent);
+			ThreadSleep(2000);
+		}
 		}
 		
 		public void clickonPollSave() {
@@ -801,16 +811,30 @@ public class WebSiteOperation extends BasePage {
 		/** identify dropdown of tem member profile*/
 		@FindBy(xpath = "//*[@class=\"configure-biography__form-select\"]/select")
 		private WebElement TeamMemberDrodown;
+		@FindBy(xpath = "//*[@class=\"form-group\"]/select")
+		private WebElement TeamMemberDrodownCIBC;
 		public void clickonTeamMemberDropdown() throws InterruptedException {	
-				webElementHelper.click(TeamMemberDrodown);		
+			if(currenturl.contains("rgmp.qa")) {
+				webElementHelper.click(TeamMemberDrodown);	
+			}
+			else if(currenturl.contains("cibc.qa")) {
+				webElementHelper.click(TeamMemberDrodownCIBC);
+			}
 		}
 		
 		/** click on newly created team member */
 		@FindBy(xpath = "//*[@class=\"configure-biography__form-select\"]/select/option[2]")
 		private WebElement Member1;
+		@FindBy(xpath = "//*[@class=\"form-group\"]/select/option[2]")
+		private WebElement TeamMemberCIBC;
 		public void clickonCreatedTeamMember() {
+			if(currenturl.contains("rgmp.qa")) {
 			waithelper.WaitForElementToBeClickable(Member1);
 			webElementHelper.click(Member1);
+			}
+			else if(currenturl.contains("cibc.qa")) {
+				webElementHelper.click(TeamMemberCIBC);
+			}
 		}
 		
 		

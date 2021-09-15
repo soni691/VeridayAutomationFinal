@@ -298,7 +298,7 @@ public class WebSiteOperationDefinition {
 	
 	@And("^I click on Blog Save button$")
 	public void I_click_on_blog_save() throws Throwable {
-		websiteoperation.clickonBlogSave();	
+		websiteoperation.clickonSaveWebcontent();	
 	}
 	
 	 @And("^I click on My Profile option$")

@@ -36,7 +36,7 @@ Scenario: Turn Workflow on scenario
 	And I enter text "WORKFLOWON"
 	And I click on YesturnOnWorkflow button
 
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Turn Website on scenario
 	When I enter admin user name
 	And I enter admin password
