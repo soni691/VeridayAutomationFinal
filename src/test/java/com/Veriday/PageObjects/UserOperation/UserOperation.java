@@ -137,7 +137,8 @@ public class UserOperation extends BasePage{
 	/** click on Action button */
 	@FindBy(xpath = "//button[normalize-space()='Action']")
 	private WebElement Action;
-	public void clickonAction() throws InterruptedException {	
+	public void clickonAction() throws InterruptedException {
+			ThreadSleep(2000);
 			webElementHelper.click(Action);		
 	}
 	

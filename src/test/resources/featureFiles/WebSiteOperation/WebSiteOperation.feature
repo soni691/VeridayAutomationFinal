@@ -115,7 +115,7 @@ Scenario: Create new Blog scenario
 	And I select category Estate planning
 	And I click on Submit For Approval button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new Team Member scenario
 	When I enter admin user name
 	And I enter admin password
@@ -135,7 +135,7 @@ Scenario: Create new Team Member scenario
 	And I select Provincial Licenses
 	And I click on Submit For Approval button
 	
-@smoke1 @RegressionTest1
+@smoke @RegressionTest
 Scenario: Create new web page on website scenario
 	When I enter admin user name
 	And I enter admin password
@@ -183,7 +183,7 @@ Scenario: Add web content on website scenario
 	And I click on Latest Blog Posts option
 	And I click on WebGadget Add button
 	And I click on Blog Save button
-#	And I click on Add WebContent button
-#	And I click on Team Member Profile
-#	And I select Team Member from user dropdown list
-#	And I click on Team Member Save button
+	And I click on Add WebContent button
+	And I click on Team Member Profile
+	And I select Team Member from user dropdown list
+	And I click on Team Member Save button

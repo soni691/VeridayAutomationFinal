@@ -572,12 +572,12 @@ public class WebSiteOperation extends BasePage {
 			ThreadSleep(2000);
 		}
 		else if(currentURL.contains("rbc.qa")) {
-			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			webElementHelper.scrollToElement(SaveWebContent);
 			webElementHelper.click(SaveWebContent);
 			ThreadSleep(2000);
 		}
 		else if(currentURL.contains("cibc.qa")) {
-			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			webElementHelper.scrollToElement(SaveWebContent);
 			webElementHelper.click(SaveWebContent);
 			ThreadSleep(2000);
 		}

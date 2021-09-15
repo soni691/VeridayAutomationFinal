@@ -344,7 +344,7 @@ public class WebSiteOperationDefinition {
 	 
 	 @And("^I click on Team Member Save button$")
 	    public void i_click_on_team_member_save_button() throws Throwable {
-	        websiteoperation.clickonMemberSave();
+	        websiteoperation.clickonSaveWebcontent();
 	    }
 	 
 	 @Then("^I should see New Form is created$")
