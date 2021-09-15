@@ -175,6 +175,7 @@ public class WebSiteOperation extends BasePage {
 		@FindBy(xpath = "//button[contains(text(),'Next Step')]")
 		private WebElement NextStep;
 		public void clickonNextStep() throws InterruptedException {	
+			ThreadSleep(1000);
 				webElementHelper.click(NextStep);		
 		}
 		
@@ -567,7 +568,7 @@ public class WebSiteOperation extends BasePage {
 				webElementHelper.scrollToElement(SaveWebContent);
 				webElementHelper.click(SaveWebContent);		
 		}	else if(currentURL.contains("rgmp.qa")) {
-			webElementHelper.scrollToElement(RGMPWebcontentSave);
+			//webElementHelper.scrollToElement(RGMPWebcontentSave);
 			webElementHelper.click(RGMPWebcontentSave);
 			ThreadSleep(2000);
 		}
@@ -580,7 +581,7 @@ public class WebSiteOperation extends BasePage {
 			webElementHelper.scrollToElement(SaveWebContent);
 			webElementHelper.click(SaveWebContent);
 			ThreadSleep(2000);
-		}
+		}	
 		}
 		
 		public void clickonPollSave() {
@@ -648,7 +649,7 @@ public class WebSiteOperation extends BasePage {
 		@FindBy(xpath = "//a[normalize-space()='Activate your blog now!']")
 		private WebElement ActivateBlog;
 		public void clickonActivateBlog() throws InterruptedException {	
-				ThreadSleep(2000);
+				ThreadSleep(3000);
 				webElementHelper.click(ActivateBlog);		
 		}
 		
@@ -858,7 +859,8 @@ public class WebSiteOperation extends BasePage {
 		@FindBy(xpath = "//label[contains(text(),'Display All Updates')]")
 		private WebElement DisplayAllUpdates;
 		public void clickonDisplayallupdate() throws InterruptedException {				
-				webElementHelper.click(DisplayAllUpdates);				
+				webElementHelper.click(DisplayAllUpdates);
+				ThreadSleep(1000);
 		}
 		
 		/** click on Setting option */

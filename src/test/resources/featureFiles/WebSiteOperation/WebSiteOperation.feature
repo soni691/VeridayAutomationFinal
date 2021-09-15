@@ -135,7 +135,7 @@ Scenario: Create new Team Member scenario
 	And I select Provincial Licenses
 	And I click on Submit For Approval button
 	
-@smoke @RegressionTest
+@smoke1 @RegressionTest1
 Scenario: Create new web page on website scenario
 	When I enter admin user name
 	And I enter admin password

@@ -257,7 +257,7 @@ public class WebSiteOperationDefinition {
 	
 	@And("^I click on Update Save button$")
 	public void I_click_on_update_save() throws Throwable {
-		websiteoperation.clickonUpdateSave();	
+		websiteoperation.clickonSaveWebcontent();	
 	}
 	
 	@And("^I click on Blog option$")
