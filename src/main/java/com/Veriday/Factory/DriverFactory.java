@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -56,11 +58,10 @@ public class DriverFactory {
 
 		if (browser.equalsIgnoreCase(Constants.BROWSER_FF)) {
 			System.setProperty("webdriver.gecko.driver", geckoDriverPath);
-
-			FirefoxOptions options = new FirefoxOptions();
-			options.addPreference("-enablePassThrough", true);
-
-			driver = new FirefoxDriver(options);
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+			driver = new FirefoxDriver(capabilities);
+	
 		} else if (browser.equalsIgnoreCase(Constants.BROWSER_CHROME)) {
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			String downloadFilepath = Constants.Download_PATH;
